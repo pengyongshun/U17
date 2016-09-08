@@ -1,14 +1,154 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#0000ff"
-    tools:context="com.example.u17.module_mine.fragment.MineFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/fragement_mine_background"
+        tools:context="com.example.u17.module_mine.fragment.MineFragment"
+        >
 
-</FrameLayout>
+        <RelativeLayout
+            android:id="@+id/rl_mine_header"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/bg_mine_head">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/user_default_header" />
+
+                <LinearLayout
+                    android:id="@+id/ll_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="点击登录"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="登陆后可以使用书架功能哟"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="16dp"
+                android:src="@drawable/icon_mine_setting" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/rl_mine_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_mine_account"
+                    style="@style/CustomLinearLayoutTextView"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:drawableTop="@drawable/user_list_account_infomation"
+                    android:padding="10dp"
+                    android:text="消费记录"
+                    />
+                <TextView
+                    android:id="@+id/tv_mine_recharge"
+                    style="@style/CustomLinearLayoutTextView"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:drawableTop="@drawable/user_list_recharge"
+                    android:padding="10dp"
+                    android:text="充值" />
+
+                <TextView
+                    android:id="@+id/tv_mine_subscribe"
+                    style="@style/CustomLinearLayoutTextView"
+                    android:layout_marginBottom="0.5dp"
+                    android:drawableTop="@drawable/user_list_subscribe"
+                    android:padding="10dp"
+                    android:text="我的订阅" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_mine_feedback"
+                    style="@style/CustomLinearLayoutTextView"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:drawableTop="@drawable/user_list_feedback"
+                    android:padding="10dp"
+                    android:text="问题反馈" />
+
+                <TextView
+                    android:id="@+id/tv_mine_author"
+                    style="@style/CustomLinearLayoutTextView"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginRight="0.5dp"
+                    android:drawableTop="@drawable/user_list_author"
+                    android:padding="10dp"
+                    android:text="成为作者" />
+
+                <TextView
+                    android:id="@+id/tv_mine_sign"
+                    style="@style/CustomLinearLayoutTextView"
+                    android:layout_marginBottom="0.5dp"
+                    android:drawableTop="@drawable/user_list_sign"
+                    android:padding="10dp"
+                    android:text="签到" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_about_us"
+                    style="@style/CustomLinearLayoutTextView"
+                    android:layout_marginRight="0.5dp"
+                    android:drawableTop="@drawable/user_list_about_us"
+                    android:padding="10dp"
+                    android:text="关于我们" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="2"
+                    android:background="#ffffff"
+                    android:scaleType="fitXY"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
