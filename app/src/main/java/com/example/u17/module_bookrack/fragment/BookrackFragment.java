@@ -12,7 +12,7 @@ import com.example.u17.R;
 
 public class BookrackFragment extends Fragment {
     private Context context;
-    public static BookrackFragment newInstance(String param1, String param2) {
+    public static BookrackFragment newInstance() {
         BookrackFragment fragment = new BookrackFragment();
         return fragment;
     }

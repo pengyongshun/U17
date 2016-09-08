@@ -12,7 +12,7 @@ import com.example.u17.R;
 
 public class MineFragment extends Fragment {
     private Context context;
-    public static MineFragment newInstance(String param1, String param2) {
+    public static MineFragment newInstance() {
         MineFragment fragment = new MineFragment();
         return fragment;
     }

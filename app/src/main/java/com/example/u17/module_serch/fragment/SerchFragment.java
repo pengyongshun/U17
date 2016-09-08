@@ -13,7 +13,7 @@ import com.example.u17.R;
 public class SerchFragment extends Fragment {
     private Context context;
 
-    public static SerchFragment newInstance(String param1, String param2) {
+    public static SerchFragment newInstance() {
         SerchFragment fragment = new SerchFragment();
         return fragment;
     }

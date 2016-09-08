@@ -12,7 +12,7 @@ import com.example.u17.R;
 
 public class HomeFragment extends Fragment {
     private Context context;
-    public static HomeFragment newInstance(String param1, String param2) {
+    public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
         return fragment;
     }
