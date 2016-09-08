@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="bg_mine_head_background">#55FFFFFF</color>
     <color name="fragement_mine_background">#FFEFEFEF</color>
+    <color name="login_text_color">#FFFFFFFF</color>
 </resources>

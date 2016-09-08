@@ -11,8 +11,8 @@
     <!-- Fragement_Mine界面的文字样式-->
     <style name="CustomLinearLayoutTextView">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">110dp</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_weight">1.2</item>
         <item name="android:background">#ffffff</item>
         <item name="android:gravity">center</item>
     </style>

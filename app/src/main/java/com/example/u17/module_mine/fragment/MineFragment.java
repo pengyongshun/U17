@@ -9,7 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.u17.R;
-
+/**
+ * @Author:king1033
+ * @Desc:
+ * @Time:2016/9/8
+ */
 public class MineFragment extends Fragment {
     private Context context;
     public static MineFragment newInstance() {
@@ -21,6 +25,8 @@ public class MineFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context=getContext();
+
+
     }
 
     @Override
