@@ -1,4 +1,4 @@
-package com.example.u17.module_guide.adapter;
+package com.example.u17.base_adapter;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;

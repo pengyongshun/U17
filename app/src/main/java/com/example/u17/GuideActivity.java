@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.example.u17.module_guide.adapter.GuideAdapter;
+import com.example.u17.base_adapter.GuideAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
