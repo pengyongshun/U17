@@ -25,8 +25,6 @@ public class MineFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context=getContext();
-
-
     }
 
     @Override

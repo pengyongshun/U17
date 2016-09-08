@@ -12,7 +12,8 @@ import android.widget.RadioGroup;
 import com.example.u17.module_bookrack.fragment.BookrackFragment;
 import com.example.u17.module_home.fragment.HomeFragment;
 import com.example.u17.module_mine.fragment.MineFragment;
-import com.example.u17.module_serach.fragment.SerachFragment;
+import com.example.u17.moudle_search.fragement.SerachFragment;
+
 
 import java.util.ArrayList;
 import java.util.List;

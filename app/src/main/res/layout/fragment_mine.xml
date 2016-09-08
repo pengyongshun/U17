@@ -122,8 +122,7 @@
                 android:padding="10dp"
                 android:text="成为作者" />
 
-            <FrameLayout style="@style/CustomLinearLayoutTextView"
-                >
+            <FrameLayout style="@style/CustomLinearLayoutTextView">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -169,7 +168,8 @@
 
             <View
                 style="@style/CustomLinearLayoutTextView"
-                android:layout_marginRight="0.5dp" />
+                android:layout_marginRight="0.5dp"
+                android:padding="10dp" />
         </LinearLayout>
     </LinearLayout>
 
