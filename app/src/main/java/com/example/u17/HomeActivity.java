@@ -12,7 +12,7 @@ import android.widget.RadioGroup;
 import com.example.u17.module_bookrack.fragment.BookrackFragment;
 import com.example.u17.module_home.fragment.HomeFragment;
 import com.example.u17.module_mine.fragment.MineFragment;
-import com.example.u17.module_serach.fragment.SerchFragment;
+import com.example.u17.module_serach.fragment.SerachFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class HomeActivity extends AppCompatActivity {
     private FragmentManager mManager;
     private List<Fragment> fragments=new ArrayList<>();
     private HomeFragment mHomeFragment;
-    private SerchFragment mSerchFragment;
+    private SerachFragment mSerchFragment;
     private MineFragment mMineFragment;
     private BookrackFragment mBookrackFragment;
     private Fragment curFragment;
@@ -49,24 +49,24 @@ public class HomeActivity extends AppCompatActivity {
           public void onCheckedChanged(RadioGroup group, int checkedId) {
               switch (checkedId){
                   case R.id.activity_home_rb_bookself:
-                      seclectStateView(0);
-                      //切换到书库fragment
-                      switchFragment(0);
-                      break;
-                  case R.id.activity_home_rb_mine:
-                      seclectStateView(1);
-                      //切换到我的fragment
-                      switchFragment(1);
-                      break;
-                  case R.id.activity_home_rb_serch:
                       seclectStateView(2);
-                      //切换到搜索fragment
+                      //切换到书库fragment
                       switchFragment(2);
                       break;
-                  case R.id.activity_home_rb_home:
+                  case R.id.activity_home_rb_mine:
                       seclectStateView(3);
-                      //切换到首页fragment
+                      //切换到我的fragment
                       switchFragment(3);
+                      break;
+                  case R.id.activity_home_rb_serch:
+                      seclectStateView(1);
+                      //切换到搜索fragment
+                      switchFragment(1);
+                      break;
+                  case R.id.activity_home_rb_home:
+                      seclectStateView(0);
+                      //切换到首页fragment
+                      switchFragment(0);
                       break;
               }
           }
@@ -85,7 +85,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private void iniFragment(){
         mHomeFragment = new HomeFragment().newInstance();
-        mSerchFragment = new SerchFragment().newInstance().newInstance();
+        mSerchFragment = new SerachFragment().newInstance().newInstance();
         mMineFragment = new MineFragment().newInstance().newInstance();
         mBookrackFragment = new BookrackFragment().newInstance().newInstance();
         fragments.add(mHomeFragment);

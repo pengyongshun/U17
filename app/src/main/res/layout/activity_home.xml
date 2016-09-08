@@ -19,6 +19,7 @@
        android:id="@+id/activity_home_rg_radiobutton"
        android:layout_width="match_parent"
        android:layout_height="60dp"
+       android:padding="10dp"
        android:orientation="horizontal">
        <RadioButton
            android:id="@+id/activity_home_rb_home"

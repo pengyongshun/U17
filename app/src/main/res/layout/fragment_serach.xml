@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.u17.module_serach.fragment.SerchFragment">
+    android:background="#00ff00"
+    tools:context="com.example.u17.module_serach.fragment.SerachFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
