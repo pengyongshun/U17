@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f7f7f7"
+    android:orientation="vertical">
+
+    <!--头部BAR-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/about_us_image_view_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10.0dp"
+            android:padding="10.0dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text="联系我们"
+            android:textColor="@color/text_color_555555"
+            android:textSize="@dimen/common_text_17sp" />
+    </RelativeLayout>
+
+
+    <!--头部BAR-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@+id/tool_bar"
+        android:background="@color/border_color_e3e3e3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="132dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30.0dp"
+                android:src="@drawable/logo_about_us" />
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="31.0dp"
+                android:layout_marginTop="14.5dp"
+                android:gravity="center"
+                android:text="@string/tv_version_name"
+                android:textColor="@color/text_color_888888"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/border_color_e3e3e3" />
+
+                <LinearLayout
+                    android:id="@+id/id_mark"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/about_us_item_height"
+                    android:background="@color/color_fcfff7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16.5dp"
+                        android:src="@drawable/icon_score_about_us" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/aboutus_line_margin_left_right"
+                        android:text="求包养、求CP、求评分"
+                        android:textColor="@color/text_color_555555"
+                        android:textSize="@dimen/common_text_15sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/id_check_update_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="60.0dp"
+                    android:background="@color/border_color_e3e3e3" />
+
+                <LinearLayout
+                    android:id="@+id/about_us_version_check_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/about_us_item_height"
+                    android:background="@color/color_fcfff7"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16.5dp"
+                        android:src="@drawable/icon_check_new_version" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/aboutus_line_margin_left_right"
+                        android:text="检查新版本"
+                        android:textColor="@color/text_color_555555"
+                        android:textSize="@dimen/common_text_15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/border_color_e3e3e3" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5.0dp"
+                android:background="@color/color_f7f7f7" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border_color_e3e3e3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_fcfff7"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/aboutus_line_margin_left_right"
+                android:paddingRight="5.0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14.0dp"
+                    android:drawableLeft="@drawable/icon_contact_us"
+                    android:drawablePadding="10.0dp"
+                    android:gravity="center"
+                    android:text="联系我们"
+                    android:textColor="@color/text_color_555555"
+                    android:textSize="@dimen/common_text_15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17.5dp"
+                    android:text="客服服务"
+                    android:textColor="@color/text_color_555555"
+                    android:textSize="@dimen/common_text_14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱: "
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_mail"
+                        android:textColor="@color/color_2b9b81"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Q Q : "
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_qq"
+                        android:textColor="@color/color_2b9b81"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17.5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IP授权 "
+                        android:textColor="@color/text_color_555555"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(版权合作、电影、电视剧、网剧、游戏、等泛娱乐改编授权)"
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱: "
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_mail"
+                        android:textColor="@color/color_2b9b81"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17.5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="APP合作 "
+                        android:textColor="@color/text_color_555555"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(APP广告、专题、活动)"
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱: "
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_mail"
+                        android:textColor="@color/color_2b9b81"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17.5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="动画合作 "
+                        android:textColor="@color/text_color_555555"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(动画发行、运营、广告植入、动画定制)"
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱: "
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_mail"
+                        android:textColor="@color/color_2b9b81"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17.5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="动画电影合作 "
+                        android:textColor="@color/text_color_555555"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(商务、动漫领域营销、广告植入、动画定制)"
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱: "
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_mail"
+                        android:textColor="@color/color_2b9b81"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17.5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="游戏合作 "
+                        android:textColor="@color/text_color_555555"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(游戏联运、代理、发行)"
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱: "
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_mail"
+                        android:textColor="@color/color_2b9b81"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17.5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="市场合作 "
+                        android:textColor="@color/text_color_555555"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(活动、展会、品牌合作、曝光、异业合作)"
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱: "
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_mail"
+                        android:textColor="@color/color_2b9b81"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17.5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="媒体合作 "
+                        android:textColor="@color/text_color_555555"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(PR稿件、专访、线下媒体活动、微博微信新媒体)"
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱: "
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_mail"
+                        android:textColor="@color/color_2b9b81"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17.5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="实体授权 "
+                        android:textColor="@color/text_color_555555"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(周边定制、衍生品、图库创意)"
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15.0dp"
+                    android:layout_marginTop="15.0dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱: "
+                        android:textColor="@color/text_color_888888"
+                        android:textSize="@dimen/common_text_13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_us_mail"
+                        android:textColor="@color/color_2b9b81"
+                        android:textSize="@dimen/common_text_13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divide_line_height_1dp"
+                android:background="@color/border_color_e3e3e3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="14.0dp"
+                android:layout_marginTop="30.0dp"
+                android:gravity="bottom"
+                android:text="@string/about_us_company"
+                android:textColor="@color/text_color_888888"
+                android:textSize="@dimen/common_text_12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4.0dp"
+                android:text="@string/about_us_copy_right"
+                android:textColor="@color/text_color_888888"
+                android:textSize="@dimen/common_text_12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="18.0dp"
+                android:text="@string/about_us_website"
+                android:textColor="@color/text_color_888888"
+                android:textSize="@dimen/common_text_12sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
