@@ -5,9 +5,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.example.u17.module_bookrack.fragment.BookrackFragment;
 import com.example.u17.module_home.fragment.HomeFragment;
@@ -21,14 +24,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class HomeActivity extends AppCompatActivity {
-    @BindView(R.id.activity_home_iv_bookself)
-    public ImageView mBtnBookself;
-    @BindView(R.id.activity_home_iv_home)
-    public ImageView mBtnHome;
-    @BindView(R.id.activity_home_iv_serch)
-    public ImageView mBtnSerch;
-    @BindView(R.id.activity_home_iv_mine)
-    public ImageView mBtnMine;
+    @BindView(R.id.activity_home_rg_radiobutton)
+    public RadioGroup mRadioGroup;
     @BindView(R.id.activity_home_fl_fragment)
     public FrameLayout mFrameLayout;
     private FragmentManager mManager;
@@ -46,9 +43,50 @@ public class HomeActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         mManager = getSupportFragmentManager();
         iniFragment();
+        initListener();
     }
 
-    private void iniFragment() {
+    private void initListener() {
+      mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+          @Override
+          public void onCheckedChanged(RadioGroup group, int checkedId) {
+              switch (checkedId){
+                  case R.id.activity_home_rb_bookself:
+                      seclectStateView(0);
+                      //切换到书库fragment
+                      switchFragment(0);
+                      break;
+                  case R.id.activity_home_rb_mine:
+                      seclectStateView(1);
+                      //切换到我的fragment
+                      switchFragment(1);
+                      break;
+                  case R.id.activity_home_rb_serch:
+                      seclectStateView(2);
+                      //切换到搜索fragment
+                      switchFragment(2);
+                      break;
+                  case R.id.activity_home_rb_home:
+                      seclectStateView(3);
+                      //切换到首页fragment
+                      switchFragment(3);
+                      break;
+              }
+          }
+      });
+    }
+
+    private void seclectStateView(int index) {
+        int childCount = mRadioGroup.getChildCount();
+        for (int i = 0; i < childCount; i++) {
+            RadioButton view = (RadioButton) mRadioGroup.getChildAt(i);
+            view.setChecked(false);
+        }
+        RadioButton curView = (RadioButton) mRadioGroup.getChildAt(index);
+        curView.setChecked(true);
+    }
+
+    private void iniFragment(){
         mHomeFragment = new HomeFragment().newInstance();
         mSerchFragment = new SerchFragment().newInstance().newInstance();
         mMineFragment = new MineFragment().newInstance().newInstance();
@@ -57,6 +95,9 @@ public class HomeActivity extends AppCompatActivity {
         fragments.add(mSerchFragment);
         fragments.add(mBookrackFragment);
         fragments.add(mMineFragment);
+        switchFragment(0);
+        seclectStateView(0);
+
     }
 
     /***
@@ -78,4 +119,8 @@ public class HomeActivity extends AppCompatActivity {
         transaction.commit();
         curFragment=fragment;
     }
+
+
+
+
 }
