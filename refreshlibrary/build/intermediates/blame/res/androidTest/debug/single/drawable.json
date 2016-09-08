@@ -4,6 +4,10 @@
         "source": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
     },
     {
+        "merged": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
         "source": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
     },
@@ -14,5 +18,9 @@
     {
         "merged": "E:\\workspace\\studiowork\\Android1604\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
         "source": "E:\\workspace\\studiowork\\Android1604\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
     }
 ]
