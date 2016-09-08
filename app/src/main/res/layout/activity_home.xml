@@ -13,8 +13,8 @@
   </FrameLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="#00ffff"/>
+        android:layout_height="1dp"
+        android:background="#55ffffff"/>
    <RadioGroup
        android:id="@+id/activity_home_rg_radiobutton"
        android:layout_width="match_parent"
