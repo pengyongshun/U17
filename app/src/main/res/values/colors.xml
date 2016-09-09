@@ -13,4 +13,9 @@
     <color name="color_fcfff7">#FFFCFFF7</color>
     <color name="text_color_555555">#FF555555</color>
     <color name="color_2b9b81">#FF2B9B81</color>
+    <color name="color_8be057">#8be057</color>
+    <color name="black">#FF000000</color>
+    <color name="text_color_type3">#ff888688</color>
+    <color name="text_color_type6">#ff435356</color>
+    <color name="text_color_8FDF50">8FDF50</color>
 </resources>

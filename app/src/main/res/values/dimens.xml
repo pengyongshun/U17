@@ -10,4 +10,7 @@
     <dimen name="divide_line_height_1dp">1dp</dimen>
     <dimen name="common_text_12sp">12sp</dimen>
     <dimen name="common_text_17sp">17sp</dimen>
+    <dimen name="third_login_icon_size">50dp</dimen>
+    <dimen name="common_text_11sp">11sp</dimen>
+    <dimen name="button_default_height_40dp">40dp</dimen>
 </resources>

@@ -16,5 +16,31 @@
         <item name="android:background">#ffffff</item>
         <item name="android:gravity">center</item>
     </style>
+    <!-- Login界面的文字样式-->
+    <style name="login_input_edit_text">
+        <item name="android:textSize">@dimen/common_text_13sp</item>
+        <item name="android:textColor">@color/common_text5</item>
+        <item name="android:textColorHint">@color/common_text5</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">40.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
 
+    <color name="common_text5">#ff909fa2</color>
+
+
+    <style name="u17_setting_check_box_default">
+        <item name="android:gravity">right</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">@dimen/setting_check_box_width</item>
+        <item name="android:layout_height">@dimen/setting_check_box_height</item>
+        <item name="android:button">@drawable/selector_reader_menu_setting_volume</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <dimen name="setting_check_box_width">35dp</dimen>
+    <dimen name="setting_check_box_height">22dp</dimen>
 </resources>
