@@ -2,4 +2,15 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="about_us_item_height">50dp</dimen>
+    <dimen name="aboutus_line_margin_left_right">17dp</dimen>
+    <dimen name="common_text_15sp">15sp</dimen>
+    <dimen name="common_text_14sp">14sp</dimen>
+    <dimen name="common_text_13sp">13sp</dimen>
+    <dimen name="divide_line_height_1dp">1dp</dimen>
+    <dimen name="common_text_12sp">12sp</dimen>
+    <dimen name="common_text_17sp">17sp</dimen>
+    <dimen name="third_login_icon_size">50dp</dimen>
+    <dimen name="common_text_11sp">11sp</dimen>
+    <dimen name="button_default_height_40dp">40dp</dimen>
 </resources>

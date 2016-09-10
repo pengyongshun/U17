@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/use_feedback_image_view_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10.0dp"
+            android:padding="10.0dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text="使用反馈"
+            android:textColor="@color/text_color_555555"
+            android:textSize="@dimen/common_text_17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:singleLine="true"
+            android:text="提交"
+            android:textColor="@color/text_color_555555"
+            android:textSize="@dimen/common_text_15sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_line_height_1dp"
+        android:background="@color/text_color_888888" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11.0dp"
+        android:layout_marginRight="11.0dp"
+        android:layout_marginTop="14.0dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/mine_feedback_content"
+            android:layout_width="match_parent"
+            android:layout_height="120.0dp"
+            android:background="@drawable/bg_serach_edittext"
+            android:gravity="top"
+            android:hint="请留下宝贵的脚印..."
+            android:maxLength="300"
+            android:padding="10.0dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_color_type3"
+            android:textSize="@dimen/common_text_11sp" />
+
+        <EditText
+            android:id="@+id/mine_feedback_contact_info"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dp"
+            android:layout_marginTop="19.0dp"
+            android:background="@drawable/bg_serach_edittext"
+            android:gravity="center_vertical"
+            android:hint="手机号码/Q Q"
+            android:inputType="number"
+            android:padding="10.0dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_color_type3"
+            android:textSize="@dimen/common_text_11sp" />
+
+        <TextView
+            android:id="@+id/mine_feedback_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10.0dp"
+            android:layout_marginTop="20.0dp"
+            android:padding="7.0dp"
+            android:text="查看历史记录"
+            android:textColor="@color/text_color_type3"
+            android:textSize="@dimen/common_text_11sp" />
+    </LinearLayout>
+
+    </LinearLayout>

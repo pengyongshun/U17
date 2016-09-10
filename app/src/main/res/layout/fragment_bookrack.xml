@@ -1,8 +1,92 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff0000"
     tools:context="com.example.u17.module_bookrack.fragment.BookrackFragment">
 
+    <RelativeLayout
+        android:id="@+id/rl_bookshelf_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RadioGroup
+            android:id="@+id/tab_layout_bookshelf"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_toLeftOf="@+id/iv_delete_read_history"
+            >
+            <RadioButton
+                android:id="@+id/bookshelf_top_text_view_collection"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="收藏"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="@dimen/common_text_15sp"
+                android:textColor="#878787"
+                />
+            <RadioButton
+                android:id="@+id/bookshelf_top_text_view_history"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="历史"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="@dimen/common_text_15sp"
+                android:textColor="#878787"
+                />
+            <RadioButton
+                android:id="@+id/bookshelf_top_text_view_download"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="下载"
+                android:button="@null"
+                android:gravity="center"
+                android:textSize="@dimen/common_text_15sp"
+                android:textColor="#878787"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+            <!--.......
+            app:tabIndicatorColor="#212121"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="#404040"
+            app:tabTextColor="#878787"
+            .....-->
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/iv_delete_read_history"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:padding="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_bookshelf_delete_normal" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_bookshelf_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_bookshelf_top"
+        android:background="#EEEEEE"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_bookshelf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_bookshelf_line"/>
+
 </RelativeLayout>
+

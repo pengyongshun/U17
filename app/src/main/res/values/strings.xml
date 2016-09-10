@@ -3,4 +3,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_version_name">版本号：3.1.2</string>
+    <string name="about_us_mail">kefu@u17.com</string>
+    <string name="about_us_qq">800002671</string>
+    <string name="about_us_company">北京四月星空网络技术有限公司 版权所有</string>
+    <string name="about_us_copy_right">Copyright©2005-2016 有妖气 版权所有</string>
+    <string name="about_us_website">© 2016 有妖气 http://www.u17.com</string>
 </resources>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f7f7f7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f7f7f7"
+        android:orientation="vertical">
+
+  <!--ToolBar-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/use_feedback_image_view_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10.0dp"
+                android:padding="10.0dp"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:singleLine="true"
+                android:text="设置"
+                android:textColor="@color/text_color_555555"
+                android:textSize="@dimen/common_text_17sp" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divide_line_height_1dp"
+            android:background="@color/text_color_888888"/>
+        <!--ToolBar-->
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26.0dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="16.0dp"
+            android:paddingLeft="20.0dp"
+            android:paddingRight="20.0dp"
+            android:paddingTop="16.0dp">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="漫画更新提醒"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+
+            <CheckBox
+                android:id="@+id/setting_comic_update_hint_switch"
+                style="@style/u17_setting_check_box_default" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dp"
+            android:layout_marginLeft="20.0dp"
+            android:layout_marginRight="20.0dp"
+            android:layout_marginTop="-2.0dp"
+            android:background="@color/text_color_888888" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="16.0dp"
+            android:paddingLeft="20.0dp"
+            android:paddingRight="20.0dp"
+            android:paddingTop="16.0dp">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="漫画推荐提醒"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+
+            <CheckBox
+                android:id="@+id/setting_comic_recommend_hint_switch"
+                style="@style/u17_setting_check_box_default" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dp"
+            android:layout_marginLeft="20.0dp"
+            android:layout_marginRight="20.0dp"
+            android:layout_marginTop="-2.0dp"
+            android:background="@color/text_color_888888" />
+
+        <LinearLayout
+            android:id="@+id/setting_cache_size_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="16.0dp"
+            android:paddingLeft="20.0dp"
+            android:paddingRight="20.0dp"
+            android:paddingTop="16.0dp">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="清除缓存"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+
+            <TextView
+                android:id="@+id/setting_cache_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_type3"
+                android:textSize="@dimen/common_text_11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27.0dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="16.0dp"
+            android:paddingLeft="20.0dp"
+            android:paddingRight="20.0dp"
+            android:paddingTop="16.0dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:text="存储设置"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dp"
+            android:layout_marginLeft="20.0dp"
+            android:layout_marginRight="20.0dp"
+            android:layout_marginTop="-2.0dp"
+            android:background="@color/text_color_888888" />
+
+        <RelativeLayout
+            android:id="@+id/setting_cache_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="16.0dp"
+            android:paddingLeft="20.0dp"
+            android:paddingRight="20.0dp">
+
+            <TextView
+                android:id="@+id/inner_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16.0dp"
+                android:text="内置存储空间"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+
+            <TextView
+                android:id="@+id/inner_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inner_title"
+                android:layout_marginTop="5.0dp"
+                android:text="path"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+
+            <ImageView
+                android:id="@+id/inner_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/inner_title"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/check_btn_off" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/sd_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1.0dp"
+            android:layout_marginLeft="20.0dp"
+            android:layout_marginRight="20.0dp"
+            android:layout_marginTop="-2.0dp"
+            android:background="@color/text_color_type6" />
+
+        <RelativeLayout
+            android:id="@+id/setting_cache_outer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="16.0dp"
+            android:paddingLeft="20.0dp"
+            android:paddingRight="20.0dp">
+
+            <TextView
+                android:id="@+id/outer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16.0dp"
+                android:text="外置存储空间"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+
+            <TextView
+                android:id="@+id/outer_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/outer_title"
+                android:layout_marginTop="5.0dp"
+                android:text="path"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+
+            <ImageView
+                android:id="@+id/outer_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/outer_title"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/check_btn_off" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27.0dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="16.0dp"
+            android:paddingLeft="20.0dp"
+            android:paddingRight="20.0dp"
+            android:paddingTop="16.0dp">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="WIFI自动下载"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+
+            <CheckBox
+                android:id="@+id/setting_wifi_auto_download_hint_switch"
+                style="@style/u17_setting_check_box_default" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dp"
+            android:layout_marginLeft="20.0dp"
+            android:layout_marginRight="20.0dp"
+            android:layout_marginTop="-2.0dp"
+            android:background="@color/text_color_type6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="16.0dp"
+            android:paddingLeft="20.0dp"
+            android:paddingRight="20.0dp"
+            android:paddingTop="16.0dp">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="网络环境提示"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+
+            <CheckBox
+                android:id="@+id/setting_network_station_hint_switch"
+                style="@style/u17_setting_check_box_default" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dp"
+            android:layout_marginLeft="20.0dp"
+            android:layout_marginRight="20.0dp"
+            android:layout_marginTop="-2.0dp"
+            android:background="@color/text_color_type6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="16.0dp"
+            android:paddingLeft="20.0dp"
+            android:paddingRight="20.0dp"
+            android:paddingTop="16.0dp">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="非WIFI环境使用"
+                android:textColor="@color/text_color_type6"
+                android:textSize="@dimen/common_text_13sp" />
+
+            <CheckBox
+                android:id="@+id/setting_use_station_hint_switch"
+                style="@style/u17_setting_check_box_default" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -6,4 +6,16 @@
     <color name="bg_mine_head_background">#55FFFFFF</color>
     <color name="fragement_mine_background">#FFEFEFEF</color>
     <color name="login_text_color">#FFFFFFFF</color>
+    <color name="color_f7f7f7">#FFF7F7F7</color>
+    <color name="border_color_e3e3e3">#FFE3E3E3</color>
+    <color name="text_color_888888">#FF888888</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_fcfff7">#FFFCFFF7</color>
+    <color name="text_color_555555">#FF555555</color>
+    <color name="color_2b9b81">#FF2B9B81</color>
+    <color name="color_8be057">#8be057</color>
+    <color name="black">#FF000000</color>
+    <color name="text_color_type3">#ff888688</color>
+    <color name="text_color_type6">#ff435356</color>
+    <color name="text_color_8FDF50">8FDF50</color>
 </resources>
