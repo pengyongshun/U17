@@ -14,7 +14,6 @@
             android:id="@+id/pull_to_refresh_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/u17_refresh_eye_nictation2"
             android:layout_gravity="center" />
 
         <ProgressBar
