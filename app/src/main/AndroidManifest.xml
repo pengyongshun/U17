@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".GuideActivity" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".moudle_search.activity.SerachDetialActivity" />
+        <activity android:name=".moudle_search.activity.SerachSerachActivity"></activity>
     </application>
 
 </manifest>

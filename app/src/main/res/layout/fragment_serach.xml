@@ -1,14 +1,26 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#00ff00"
-    tools:context="com.example.u17.module_serach.fragment.SerachFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:background="#fafafa"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/fragment_serach_list_btn_serach"
+        android:layout_width="500dp"
+        android:background="@drawable/fragment_serach_btn_serach"
+        android:text="镇魂街"
+        android:layout_centerHorizontal="true"
+        android:layout_height="60dp" />
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/fragment_serach_list_btn_serach"
+        android:background="#eeeeee"/>
+    <ListView
+        android:id="@+id/fragment_serach_list_lv_title"
+        android:layout_width="match_parent"
+        android:layout_below="@id/fragment_serach_list_btn_serach"
+        android:layout_marginTop="10dp"
+        android:divider="@null"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
