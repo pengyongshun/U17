@@ -36,6 +36,7 @@
         <activity android:name=".module_mine.activity.FeedbackActivity" />
         <activity android:name=".module_mine.activity.GameActivity" />
         <activity android:name=".module_mine.activity.SettingActivity" />
+        <activity android:name=".moudle_search.activity.SerachDetialCategoryActivity"/>
         <activity
             android:name=".module_login.activity.RegisterActivity"
             android:label="@string/title_activity_register"></activity>

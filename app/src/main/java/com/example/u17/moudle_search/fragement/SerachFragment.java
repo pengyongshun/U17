@@ -111,7 +111,6 @@ public class SerachFragment extends Fragment implements View.OnClickListener {
             }
         });
     }
-
     private void loadBottomData() {
         HttpSerachUitls.init(SerachUrl.SERACH_LIST_URL_BASE).getSerachListBeanFromNet().enqueue(new Callback<SerachListBean>() {
             @Override

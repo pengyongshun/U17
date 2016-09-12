@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Display;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -56,7 +57,7 @@ public class StatisticsActivity extends AppCompatActivity {
     @BindView(R.id.activity_statistics_bottom_rv_like)
     public RecyclerView mRecyclerView;
     private String cover;
-    private List<String> urls=new ArrayList<>();
+    private List<StatisticsBottomBean.DataBean.ReturnDataBean> returnDataBeens=new ArrayList<>();
     private StatisticsBottomAdapter mStatisticsBottomAdapter;
     private int width;
     private String commentCount;
@@ -72,7 +73,7 @@ public class StatisticsActivity extends AppCompatActivity {
     private String description;
     private int favorite_total;
     private List<SerachStatisticMoreBean.DataBean.ReturnDataBean.OtherWorksBean> otherWorks;
-
+    private StatisticsBottomBean.DataBean.ReturnDataBean returnDataBean;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,12 +106,7 @@ public class StatisticsActivity extends AppCompatActivity {
             @Override
             public void callBack(StatisticsBottomBean statisticsBottomBean) {
                 List<StatisticsBottomBean.DataBean.ReturnDataBean> returnData = statisticsBottomBean.getData().getReturnData();
-                int size = returnData.size();
-                for (int i = 0; i < size; i++) {
-                    StatisticsBottomBean.DataBean.ReturnDataBean returnDataBean = returnData.get(i);
-                    String cover = returnDataBean.getCover();
-                    urls.add(cover);
-                }
+                returnDataBeens.addAll(returnData);
                 mStatisticsBottomAdapter = new StatisticsBottomAdapter();
                 mRecyclerView.setAdapter(mStatisticsBottomAdapter);
             }
@@ -122,16 +118,12 @@ public class StatisticsActivity extends AppCompatActivity {
      * **/
     class StatisticsViewHodler extends RecyclerView.ViewHolder{
            ImageView imageView;
+           TextView textView;
         public StatisticsViewHodler(View itemView) {
             super(itemView);
-            imageView= (ImageView) itemView;
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //TODO  根据comic_id来刷新当前界面的head部分即可
-                    Toast.makeText(StatisticsActivity.this, "根据comic_id来刷新当前界面的head部分即可", Toast.LENGTH_SHORT).show();
-                }
-            });
+            imageView= (ImageView) itemView.findViewById(R.id.item_fragment_statistics_more_detial_gridview_iv_icon);
+            textView= (TextView) itemView.findViewById(R.id.item_fragment_statistics_more_detial_gridview_tv_name);
+
         }
     }
     //这个类类似于baseAdapter的getView中的ViewHoder
@@ -140,22 +132,32 @@ public class StatisticsActivity extends AppCompatActivity {
         //类似于baseAdapter的getView中的初次  复用
         @Override
         public StatisticsViewHodler onCreateViewHolder(ViewGroup parent, int viewType) {
-            ImageView imageView=new ImageView(StatisticsActivity.this);
-            imageView.setLayoutParams(new RecyclerView.LayoutParams(width,150));
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            return new StatisticsViewHodler(imageView);
+            View view= LayoutInflater.from(StatisticsActivity.this).inflate(R.layout.item_fragment_statistics_more_detial_gridview,parent,false);
+            view.setLayoutParams(new RecyclerView.LayoutParams(width, ViewGroup.LayoutParams.WRAP_CONTENT));
+            return new StatisticsViewHodler(view);
         }
 
         //类似于baseAdapter的getView中的更新UI
         @Override
-        public void onBindViewHolder(StatisticsViewHodler holder, int position) {
-            String url = urls.get(position);
-            Picasso.with(StatisticsActivity.this).load(url).into(holder.imageView);
+        public void onBindViewHolder(final StatisticsViewHodler holder, int position) {
+            final StatisticsBottomBean.DataBean.ReturnDataBean returnDataBean = returnDataBeens.get(position);
+            holder.imageView.setTag(returnDataBean);
+            String cover = returnDataBean.getCover();
+            String name = returnDataBean.getName();
+            holder.textView.setText(name);
+            Picasso.with(StatisticsActivity.this).load(cover).into(holder.imageView);
+            //对每一条目进行监听
+            holder.imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
         }
 
         @Override
         public int getItemCount() {
-            return urls==null?0:urls.size();
+            return returnDataBeens==null?0:returnDataBeens.size();
         }
     }
 //...........................................................................
@@ -292,7 +294,7 @@ public class StatisticsActivity extends AppCompatActivity {
                 //TODO  将所有的章节排序
                 Toast.makeText(StatisticsActivity.this, "将所有的章节排序", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.activity_statistics_middle_ll_open:
+            case R.id.activity_statistics_middle_tv_open:
                 //TODO  打开所有的章节
                 Toast.makeText(StatisticsActivity.this, "打开所有的章节", Toast.LENGTH_SHORT).show();
                 break;

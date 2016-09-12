@@ -9,19 +9,19 @@
         android:layout_height="40dp"
         android:text="作品介绍"
         android:gravity="center_vertical"
-        android:textSize="24dp"/>
+        android:textSize="16dp"/>
     <TextView
         android:id="@+id/fragment_statistics_more_detial_tv_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="XXXXX"
         android:layout_below="@id/fragment_statistics_more_detial_tv_zp"
-        android:textSize="20dp"/>
+        android:textSize="12dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_below="@id/fragment_statistics_more_detial_tv_description"
         >
         <TextView
@@ -31,7 +31,7 @@
             android:layout_weight="1"
             android:text="XXXX"
             android:gravity="center_vertical"
-            android:textSize="24dp"/>
+            android:textSize="16dp"/>
         <TextView
             android:id="@+id/fragment_statistics_more_detial_zp_tv_type"
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
             android:layout_weight="1"
             android:text="作品类型"
             android:gravity="center_vertical"
-            android:textSize="24dp"/>
+            android:textSize="16dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -52,7 +52,7 @@
                 android:layout_weight="1"
                 android:text="类别：xxxx"
                 android:gravity="center_vertical"
-                android:textSize="20dp"/>
+                android:textSize="12dp"/>
             <TextView
                 android:id="@+id/fragment_statistics_more_detial_zp_tv_type_shortdesc"
                 android:layout_width="0dp"
@@ -60,7 +60,7 @@
                 android:layout_weight="1"
                 android:text="类型：xxxx"
                 android:gravity="center_vertical"
-                android:textSize="20dp"/>
+                android:textSize="12dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,7 +74,7 @@
                 android:layout_weight="1"
                 android:text="状态：已完结"
                 android:gravity="center_vertical"
-                android:textSize="20dp"/>
+                android:textSize="12dp"/>
             <TextView
                 android:id="@+id/fragment_statistics_more_detial_zp_tv_accredit"
                 android:layout_width="0dp"
@@ -82,7 +82,7 @@
                 android:layout_weight="1"
                 android:text="授权：签约"
                 android:gravity="center_vertical"
-                android:textSize="20dp"/>
+                android:textSize="12dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                 android:layout_weight="1"
                 android:text="点击：xxxx"
                 android:gravity="center_vertical"
-                android:textSize="20dp"/>
+                android:textSize="12dp"/>
             <TextView
                 android:id="@+id/fragment_statistics_more_detial_zp_tv_monthticke"
                 android:layout_width="0dp"
@@ -104,7 +104,7 @@
                 android:layout_weight="1"
                 android:text="月票：xxxx"
                 android:gravity="center_vertical"
-                android:textSize="20dp"/>
+                android:textSize="12dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -118,7 +118,7 @@
                 android:layout_weight="1"
                 android:text="收藏：xxxx"
                 android:gravity="center_vertical"
-                android:textSize="20dp"/>
+                android:textSize="12dp"/>
             <TextView
                 android:id="@+id/fragment_statistics_more_detial_zp_tv_total_tucao"
                 android:layout_width="0dp"
@@ -126,7 +126,7 @@
                 android:layout_weight="1"
                 android:text="吐槽：xxxx"
                 android:gravity="center_vertical"
-                android:textSize="20dp"/>
+                android:textSize="12dp"/>
         </LinearLayout>
     </LinearLayout>
 
