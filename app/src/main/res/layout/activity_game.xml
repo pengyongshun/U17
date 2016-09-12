@@ -11,13 +11,12 @@
         android:layout_height="40dp"
         android:layout_gravity="center_vertical|left"
         android:layout_margin="20dp"
-        android:src="@drawable/icon_game_back" />
+        android:src="@drawable/app_icon" />
 
     <ListView
         android:id="@+id/game_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     </ListView>
 
 

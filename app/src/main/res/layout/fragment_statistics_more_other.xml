@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.u17.fragment.StatisticsMoreOtherFragment">
+  <GridView
+      android:id="@+id/fragment_statistics_more_other_gv_content"
+      android:layout_width="match_parent"
+      android:numColumns="3"
+      android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/fragment_statistics_more_other_tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="亲！没有作品喔"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+</RelativeLayout>
