@@ -26,8 +26,6 @@
         </activity>
         <activity android:name=".GuideActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".moudle_search.activity.StatisticsActivity"/>
-        <activity android:name=".moudle_search.activity.StatisticsMoreActivity"/>
         <activity android:name=".moudle_search.activity.SerachDetialActivity" />
         <activity android:name=".moudle_search.activity.SerachSerachActivity" />
         <activity android:name=".module_login.activity.LoginActivity" />
@@ -36,8 +34,9 @@
         <activity android:name=".module_mine.activity.FeedbackActivity" />
         <activity android:name=".module_mine.activity.GameActivity" />
         <activity android:name=".module_mine.activity.SettingActivity" />
-        <activity android:name=".module_login.activity.RegisterActivity"/>
-
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register"></activity>
     </application>
 
 </manifest>

@@ -47,6 +47,10 @@
     <android.support.design.widget.TabLayout
         android:id="@+id/activity_statistics_more_tab_title"
         android:layout_width="match_parent"
+        app:tabMode="fixed"
+        app:tabIndicatorHeight="3dp"
+        app:tabIndicatorColor="#00ff00"
+        app:tabSelectedTextColor="#00ff00"
         android:layout_below="@id/activity_statistics_more_ll_head"
         android:layout_height="60dp"/>
     <android.support.v4.view.ViewPager
