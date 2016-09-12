@@ -34,6 +34,7 @@ public class BookrackPageAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return fragments!=null?fragments.size():0;
     }
+
     @Override
     public CharSequence getPageTitle(int position) {
         String[] stringArray = context.getResources().getStringArray(R.array.bookshelfTabs);

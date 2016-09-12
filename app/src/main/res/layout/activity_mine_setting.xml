@@ -16,7 +16,7 @@
             android:layout_height="50dp">
 
             <ImageView
-                android:id="@+id/use_feedback_image_view_back"
+                android:id="@+id/setting_image_view_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
