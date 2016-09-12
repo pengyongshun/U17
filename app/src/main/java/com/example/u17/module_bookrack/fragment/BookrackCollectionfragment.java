@@ -12,7 +12,7 @@ import com.example.u17.R;
 
 /**
  * @Author:king1033
- * @Desc:
+ * @Desc:BookrackCollectionFragment
  * @Time:2016/9/12
  */
 public class BookrackCollectionFragment extends Fragment {

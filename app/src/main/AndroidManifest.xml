@@ -6,6 +6,11 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/app_icon"
@@ -22,13 +27,16 @@
         <activity android:name=".GuideActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".moudle_search.activity.SerachDetialActivity" />
-        <activity android:name=".moudle_search.activity.SerachSerachActivity"/>
-        <activity android:name=".module_login.LoginActivity"/>
-        <activity android:name=".module_mine.activity.AboutUsActivity"/>
-        <activity android:name=".module_mine.activity.AuthorActivity"/>
-        <activity android:name=".module_mine.activity.FeedbackActivity"/>
-        <activity android:name=".module_mine.activity.GameActivity"/>
-        <activity android:name=".module_mine.activity.SettingActivity"/>
+        <activity android:name=".moudle_search.activity.SerachSerachActivity" />
+        <activity android:name=".module_login.activity.LoginActivity" />
+        <activity android:name=".module_mine.activity.AboutUsActivity" />
+        <activity android:name=".module_mine.activity.AuthorActivity" />
+        <activity android:name=".module_mine.activity.FeedbackActivity" />
+        <activity android:name=".module_mine.activity.GameActivity" />
+        <activity android:name=".module_mine.activity.SettingActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register"></activity>
     </application>
 
 </manifest>

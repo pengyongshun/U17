@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.u17.R;
-import com.example.u17.module_login.LoginActivity;
+import com.example.u17.module_login.activity.LoginActivity;
 import com.example.u17.module_mine.activity.AboutUsActivity;
 import com.example.u17.module_mine.activity.AuthorActivity;
 import com.example.u17.module_mine.activity.FeedbackActivity;
