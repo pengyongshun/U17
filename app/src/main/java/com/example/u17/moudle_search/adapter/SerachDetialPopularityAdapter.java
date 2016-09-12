@@ -65,7 +65,7 @@ public class SerachDetialPopularityAdapter extends BaseAdapter {
         String description = comicsBean.getDescription();
         String name = comicsBean.getName();
         List<String> tags = comicsBean.getTags();
-        hodler.ivCover.setImageResource(R.mipmap.ic_launcher);
+        hodler.ivCover.setImageResource(R.drawable.main_recycler_image_default);
         if (!cover.isEmpty()){
             Picasso.with(context).load(cover).into(hodler.ivCover);
         }

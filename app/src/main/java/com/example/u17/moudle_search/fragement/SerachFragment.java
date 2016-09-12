@@ -12,10 +12,12 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.u17.R;
 import com.example.u17.base_uitls.log_uitls.LogUtils;
 import com.example.u17.moudle_search.activity.SerachDetialActivity;
+import com.example.u17.moudle_search.activity.SerachDetialCategoryActivity;
 import com.example.u17.moudle_search.activity.SerachSerachActivity;
 import com.example.u17.moudle_search.adapter.SerachListGvBottomAdapter;
 import com.example.u17.moudle_search.adapter.SerachListGvHeadAdapter;
@@ -24,6 +26,7 @@ import com.example.u17.moudle_search.bean.ExtraBean;
 import com.example.u17.moudle_search.bean.SerachListBean;
 import com.example.u17.moudle_search.http.HttpSerachUitls;
 import com.example.u17.moudle_search.url.SerachUrl;
+import com.example.u17.moudle_search.bean.RankingListBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +43,8 @@ public class SerachFragment extends Fragment implements View.OnClickListener {
     public ListView mListView;
     @BindView(R.id.fragment_serach_list_btn_serach)
     public Button mBtnSerach;
+    @BindView(R.id.fragment_serach_list_tv_empty)
+    public TextView mTvEmpty;
     private List<Integer> ids=new ArrayList<>();
     private SerachListLvAdapter mSerachListLvAdapter;
     private List<SerachListBean.DataBean.ReturnDataBean.TopListBean>topBeans=new ArrayList<>();
@@ -78,7 +83,33 @@ public class SerachFragment extends Fragment implements View.OnClickListener {
     private void initBottomView() {
         mBottomView = LayoutInflater.from(context).inflate(R.layout.fragment_serach_list_bottom,null);
         mGvBottom = (GridView) mBottomView.findViewById(R.id.fragment_serach_list_gv_bottom);
+        initBottomAdapter();
         loadBottomData();
+        initBottomListener();
+    }
+
+    private void initBottomListener() {
+        mGvBottom.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent1=new Intent(context, SerachDetialCategoryActivity.class);
+                Bundle bundle=new Bundle();
+                if (!rankingBeans.isEmpty()){
+                    RankingListBean rankingListBean=new RankingListBean();
+                    SerachListBean.DataBean.ReturnDataBean.RankingListBean rankingBean = rankingBeans.get(position);
+                    String argName = rankingBean.getArgName();
+                    int argValue = rankingBean.getArgValue();
+                    String sortName = rankingBean.getSortName();
+                    rankingListBean.setArgValue(argValue);
+                    rankingListBean.setArgName(argName);
+                    rankingListBean.setSortName(sortName);
+                    LogUtils.log(SerachFragment.class,rankingListBean.toString());
+                    bundle.putSerializable("RankingListBean",rankingListBean);
+                    intent1.putExtra("bundle",bundle);
+                    startActivity(intent1);
+                }
+            }
+        });
     }
 
     private void loadBottomData() {
@@ -93,7 +124,7 @@ public class SerachFragment extends Fragment implements View.OnClickListener {
                 SerachListBean.DataBean.ReturnDataBean returnData = data.getReturnData();
                 List<SerachListBean.DataBean.ReturnDataBean.RankingListBean> rankingList = returnData.getRankingList();
                 rankingBeans.addAll(rankingList);
-                initBottomAdapter();
+                mSerachListGvBottomAdapter.notifyDataSetChanged();
                 //添加头部
                 mListView.addFooterView(mBottomView);
                 mSerachListLvAdapter.notifyDataSetChanged();
@@ -107,7 +138,7 @@ public class SerachFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initBottomAdapter() {
-        if (!rankingBeans.isEmpty()){
+        if (rankingBeans!=null){
             mSerachListGvBottomAdapter = new SerachListGvBottomAdapter(context,rankingBeans);
             mGvBottom.setAdapter(mSerachListGvBottomAdapter);
         }
@@ -196,6 +227,7 @@ public class SerachFragment extends Fragment implements View.OnClickListener {
         ids.add(R.drawable.icon_classify_bottom_top_image);
         mSerachListLvAdapter = new SerachListLvAdapter(context,ids);
         mListView.setAdapter(mSerachListLvAdapter);
+        mListView.setEmptyView(mTvEmpty);
     }
     /**
      * 点击转跳到搜索界面

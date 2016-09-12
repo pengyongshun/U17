@@ -2,6 +2,7 @@ package com.example.u17.moudle_search.fragement;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -9,10 +10,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.u17.R;
+import com.example.u17.moudle_search.activity.StatisticsActivity;
 import com.example.u17.moudle_search.adapter.SerachDetialTodayAdapter;
 import com.example.u17.moudle_search.ascytask.SerachDetialHeadTodayAscytask;
 import com.example.u17.moudle_search.bean.ExtraBean;
@@ -109,6 +112,25 @@ public class SerachDetialTodayFragment extends Fragment {
                 //上拉加载更多
                 count++;
                 mHandler.sendEmptyMessageDelayed(2,1000);
+            }
+        });
+        //点击每一个item转跳到统计的界面
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //将comicId和cover传过去
+                if (beens==null){
+                    return;
+                }
+                SerachDetialTodayBean.DataBean.ReturnDataBean.ComicsBean comicsBean = beens.get(position-1);
+                int comicId = comicsBean.getComicId();
+                String cover = comicsBean.getCover();
+                Intent intent=new Intent(context, StatisticsActivity.class);
+                Bundle bundle=new Bundle();
+                bundle.putInt("comicId",comicId);
+                bundle.putString("cover",cover);
+                intent.putExtra("bundle",bundle);
+                startActivity(intent);
             }
         });
     }

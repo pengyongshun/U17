@@ -22,7 +22,10 @@
         <activity android:name=".GuideActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".moudle_search.activity.SerachDetialActivity" />
-        <activity android:name=".moudle_search.activity.SerachSerachActivity"></activity>
+        <activity android:name=".moudle_search.activity.SerachSerachActivity" />
+        <activity android:name=".moudle_search.activity.SerachDetialCategoryActivity" />
+        <activity android:name=".moudle_search.activity.StatisticsActivity" />
+        <activity android:name=".moudle_search.activity.StatisticsMoreActivity" />
     </application>
 
 </manifest>

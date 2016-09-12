@@ -61,7 +61,7 @@ public class SerachListGvBottomAdapter extends BaseAdapter {
         SerachListBean.DataBean.ReturnDataBean.RankingListBean rankingListBean = beanList.get(position);
         String cover = rankingListBean.getCover();
         String sortName = rankingListBean.getSortName();
-        holder.ivBottom.setImageResource(R.mipmap.ic_launcher);
+        holder.ivBottom.setImageResource(R.drawable.main_recycler_image_default);
         if (!cover.isEmpty()){
             Picasso.with(context).load(cover).into(holder.ivBottom);
         }

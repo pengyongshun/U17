@@ -58,7 +58,7 @@ public class SerachListGvHeadAdapter extends BaseAdapter {
 
         SerachListBean.DataBean.ReturnDataBean.TopListBean topListBean = beanList.get(position);
         String cover = topListBean.getCover();
-        hodler.imageView.setImageResource(R.mipmap.ic_launcher);
+        hodler.imageView.setImageResource(R.drawable.main_recycler_image_default);
         Picasso.with(context).load(cover).into(hodler.imageView);
         return convertView;
     }

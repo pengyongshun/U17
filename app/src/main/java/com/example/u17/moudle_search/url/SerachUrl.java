@@ -14,5 +14,9 @@ public class SerachUrl {
     public static final String SERACH_DETIAL_HEAD_URL="http://app.u17.com/v3/appV3/android/phone/list/commonComicList?argValue=1&argName=serial&argCon=4&page=1&v=3120100&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
     public static final String SERACH_DETIAL_HEAD_URL_BASE="http://app.u17.com/v3/appV3/android/phone/list/commonComicList";
     public static final String SERACH_DETIAL_HEAD_URL_BOTTOM="&v=3120100&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
+    //搜索界面的bottom的item的详情  点击1 更新2 收藏3  根据argCon；每一个item根据只需要根据argValue=121  argName=special  argCon=1  page=1
+    public static final String SERACH_DETIAL_BOTTOM_URL="http://app.u17.com/v3/appV3/android/phone/list/commonComicList?argValue=121&argName=special&argCon=1&page=1&v=3120100&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
+    public static final String SERACH_DETIAL_BOTTOM_URL_BASE="http://app.u17.com/v3/appV3/android/phone/list/commonComicList";
+    public static final String SERACH_DETIAL_BOTTOM_URL_BOTTOM="&v=3120100&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
 
 }

@@ -124,7 +124,6 @@ public class SerachListBean {
                 private String cover;
                 private String argName;
                 private int argValue;
-                private int argCon;
 
                 public String getSortName() {
                     return sortName;
@@ -158,13 +157,6 @@ public class SerachListBean {
                     this.argValue = argValue;
                 }
 
-                public int getArgCon() {
-                    return argCon;
-                }
-
-                public void setArgCon(int argCon) {
-                    this.argCon = argCon;
-                }
             }
 
             public static class TopListBean {
