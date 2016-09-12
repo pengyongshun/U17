@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progressbar_sd_available"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:max="100"
+        android:progress="20"
+        android:progressDrawable="@drawable/custom_progressbar_horizontal" />
+
+    <TextView
+        android:id="@+id/bookrack_sd_used_size"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/bookrack_sd_available_size"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingRight="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <ListView
+        android:id="@+id/bookrack_list_view_download"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/progressbar_sd_available"/>
+
+
+</RelativeLayout>

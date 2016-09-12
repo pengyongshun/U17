@@ -9,4 +9,5 @@
     <string name="about_us_company">北京四月星空网络技术有限公司 版权所有</string>
     <string name="about_us_copy_right">Copyright©2005-2016 有妖气 版权所有</string>
     <string name="about_us_website">© 2016 有妖气 http://www.u17.com</string>
+    <string name="login"><![CDATA[<u>请登录后</u>]]></string>
 </resources>
