@@ -112,6 +112,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:id="@+id/id_mobile_register"
                         android:layout_width="wrap_content"
