@@ -93,7 +93,6 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         });
 
         mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
     }
 
     private void populateAutoComplete() {

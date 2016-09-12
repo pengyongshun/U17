@@ -1,5 +1,6 @@
 package com.example.u17.moudle_search.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  * @Desc:
  * @Time:2016/9/10
  */
-public class SerachStatisticMoreBean {
+public class SerachStatisticMoreBean implements Serializable{
 
     /**
      * code : 1
