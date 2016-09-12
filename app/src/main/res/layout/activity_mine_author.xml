@@ -33,7 +33,7 @@
         android:background="@color/text_color_888888"/>
 
     <WebView
-        android:id="@+id/author_webview"
+        android:id="@+id/author_web_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

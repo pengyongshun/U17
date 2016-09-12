@@ -1,11 +1,19 @@
 [
     {
+        "merged": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\u17_refresh_eye_nictation1.png",
+        "source": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\u17_refresh_eye_nictation1.png"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\u17_refresh_eye_close.png",
         "source": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\u17_refresh_eye_close.png"
     },
     {
         "merged": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_flip.png",
         "source": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\default_ptr_flip.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\u17_refresh_eye_close.png",
+        "source": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\u17_refresh_eye_close.png"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\u17_refresh_logo.png",
@@ -42,6 +50,14 @@
     {
         "merged": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\u17_refresh_eye_nictation1.png",
         "source": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\u17_refresh_eye_nictation1.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\u17_refresh_eye_nictation2.png",
+        "source": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\u17_refresh_eye_nictation2.png"
+    },
+    {
+        "merged": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\u17_refresh_logo.png",
+        "source": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\u17_refresh_logo.png"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\default_ptr_flip.png",

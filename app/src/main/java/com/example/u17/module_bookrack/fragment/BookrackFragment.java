@@ -66,7 +66,7 @@ public class BookrackFragment extends Fragment{
     private void initFragments() {
         fragments.add(BookrackCollectionFragment.newInstance());
         fragments.add(BookrackHistoryFragment.newInstance());
-        fragments.add(BookrackHistoryFragment.newInstance());
+        fragments.add(BookrackDownloadFragment.newInstance());
         pagerAdapter.notifyDataSetChanged();
     }
 }
