@@ -125,6 +125,7 @@
                         android:src="@drawable/icon_check_new_version" />
 
                     <TextView
+                        android:id="@+id/about_us_text_update"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingLeft="@dimen/aboutus_line_margin_left_right"

@@ -76,8 +76,8 @@
             <TextView
                 android:id="@+id/fragment_mine_text_account"
                 style="@style/CustomLinearLayoutTextView"
-                android:layout_marginBottom="0.5dp"
-                android:layout_marginRight="0.5dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
                 android:drawableTop="@drawable/user_list_account_infomation"
                 android:padding="10dp"
                 android:text="消费记录" />
@@ -85,8 +85,8 @@
             <TextView
                 android:id="@+id/fragment_mine_text_recharge"
                 style="@style/CustomLinearLayoutTextView"
-                android:layout_marginBottom="0.5dp"
-                android:layout_marginRight="0.5dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
                 android:drawableTop="@drawable/user_list_recharge"
                 android:padding="10dp"
                 android:text="充值" />
@@ -94,7 +94,7 @@
             <TextView
                 android:id="@+id/fragment_mine_text_subscribe"
                 style="@style/CustomLinearLayoutTextView"
-                android:layout_marginBottom="0.5dp"
+                android:layout_marginBottom="1dp"
                 android:drawableTop="@drawable/user_list_subscribe"
                 android:padding="10dp"
                 android:text="我的订阅" />
@@ -109,8 +109,8 @@
             <TextView
                 android:id="@+id/fragment_mine_text_feedback"
                 style="@style/CustomLinearLayoutTextView"
-                android:layout_marginBottom="0.5dp"
-                android:layout_marginRight="0.5dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
                 android:drawableTop="@drawable/user_list_feedback"
                 android:padding="10dp"
                 android:text="问题反馈" />
@@ -118,8 +118,8 @@
             <TextView
                 android:id="@+id/fragment_mine_text_author"
                 style="@style/CustomLinearLayoutTextView"
-                android:layout_marginBottom="0.5dp"
-                android:layout_marginRight="0.5dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="1dp"
                 android:drawableTop="@drawable/user_list_author"
                 android:padding="10dp"
                 android:text="成为作者" />
@@ -137,7 +137,7 @@
                     android:id="@+id/fragment_mine_text_sign"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="0.5dp"
+                    android:layout_marginBottom="1dp"
                     android:drawableTop="@drawable/user_list_sign"
                     android:gravity="center"
                     android:padding="10dp"
@@ -156,7 +156,7 @@
             <TextView
                 android:id="@+id/fragment_mine_text_games"
                 style="@style/CustomLinearLayoutTextView"
-                android:layout_marginRight="0.5dp"
+                android:layout_marginRight="1dp"
                 android:drawableTop="@drawable/user_list_game"
                 android:padding="10dp"
                 android:text="游戏" />
@@ -164,15 +164,14 @@
             <TextView
                 android:id="@+id/fragment_mine_text_about_us"
                 style="@style/CustomLinearLayoutTextView"
-                android:layout_marginRight="0.5dp"
+                android:layout_marginRight="1dp"
                 android:drawableTop="@drawable/user_list_about_us"
                 android:padding="10dp"
                 android:text="关于我们" />
 
             <View
                 style="@style/CustomLinearLayoutTextView"
-                android:layout_marginLeft="0.5dp"
-                android:layout_marginTop="0.5dp"
+                android:layout_marginTop="1dp"
                 android:padding="10dp" />
         </LinearLayout>
     </LinearLayout>
