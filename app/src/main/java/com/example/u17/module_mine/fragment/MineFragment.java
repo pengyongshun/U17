@@ -60,8 +60,8 @@ public class MineFragment extends Fragment implements View.OnClickListener{
     @BindView(R.id.fragment_mine_text_sign)
     public TextView mSign;
     //游戏
-    @BindView(R.id.fragment_mine_text_games)
-    public TextView mGame;
+//    @BindView(R.id.fragment_mine_text_games)
+//    public TextView mGame;
     //关于我们
     @BindView(R.id.fragment_mine_text_about_us)
     public TextView mAboutUs;
@@ -98,7 +98,7 @@ public class MineFragment extends Fragment implements View.OnClickListener{
         mFeedback.setOnClickListener(this);
         mAuthor.setOnClickListener(this);
         mSign.setOnClickListener(this);
-        mGame.setOnClickListener(this);
+//        mGame.setOnClickListener(this);
         mAboutUs.setOnClickListener(this);
     }
 
@@ -142,10 +142,10 @@ public class MineFragment extends Fragment implements View.OnClickListener{
                 Intent intent9=new Intent(context, LoginActivity.class);
                 startActivity(intent9);
                 break;
-            case R.id.fragment_mine_text_games:
-                Intent intent10=new Intent(context, GameActivity.class);
-                startActivity(intent10);
-                break;
+//            case R.id.fragment_mine_text_games:
+//                Intent intent10=new Intent(context, GameActivity.class);
+//                startActivity(intent10);
+//                break;
             case R.id.fragment_mine_text_about_us:
                 Intent intent11=new Intent(context, AboutUsActivity.class);
                 startActivity(intent11);
