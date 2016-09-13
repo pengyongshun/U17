@@ -74,6 +74,9 @@ public class StatisticsActivity extends AppCompatActivity {
     private int favorite_total;
     private List<SerachStatisticMoreBean.DataBean.ReturnDataBean.OtherWorksBean> otherWorks;
     private StatisticsBottomBean.DataBean.ReturnDataBean returnDataBean;
+    private String url;
+    private String mComicId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,12 +89,7 @@ public class StatisticsActivity extends AppCompatActivity {
         //从serachFragment
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("bundle");
-        cover = bundle.getString("cover");
         int comicId = bundle.getInt("comicId");
-        if (cover==null){
-            return;
-        }
-        Picasso.with(this).load(cover).into(ivIcon);
         loadHeadData(comicId);
         initBotom();
     }
@@ -144,13 +142,17 @@ public class StatisticsActivity extends AppCompatActivity {
             holder.imageView.setTag(returnDataBean);
             String cover = returnDataBean.getCover();
             String name = returnDataBean.getName();
+            String comic_id = returnDataBean.getComic_id();
+            holder.imageView.setTag(comic_id);
             holder.textView.setText(name);
             Picasso.with(StatisticsActivity.this).load(cover).into(holder.imageView);
             //对每一条目进行监听
             holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    String tag = (String) v.getTag();
+                    int id = Integer.parseInt(tag);
+                    loadHeadData(id);
                 }
             });
         }
@@ -192,8 +194,6 @@ public class StatisticsActivity extends AppCompatActivity {
         //加载更多的详情
         new SerachStatisticMoreAscytask(new SerachStatisticMoreAscytask.SSMCallBack() {
 
-
-
             @Override
             public void callBack(SerachStatisticMoreBean serachStatisticMoreBean) {
                 SerachStatisticMoreBean.DataBean.ReturnDataBean returnData1 = serachStatisticMoreBean.getData().getReturnData();
@@ -201,6 +201,9 @@ public class StatisticsActivity extends AppCompatActivity {
 
                 SerachStatisticMoreBean.DataBean.ReturnDataBean.ComicBean comic = serachStatisticMoreBean.getData().getReturnData().getComic();
                 SerachStatisticMoreBean.DataBean.ReturnDataBean.ComicBean.AuthorBean author = comic.getAuthor();
+                 url = comic.getCover();
+                Picasso.with(StatisticsActivity.this).load(url).into(ivIcon);
+                mComicId = comic.getComic_id();
                 authorName = author.getName();
                 avatar = author.getAvatar();
                 short_description = comic.getShort_description();
@@ -234,8 +237,14 @@ public class StatisticsActivity extends AppCompatActivity {
                 Toast.makeText(StatisticsActivity.this, "分享", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.activity_statistics_head_iv_icon:
-                //TODO  点击icon 将其发大，还可以分享到那个平台
-                Toast.makeText(StatisticsActivity.this, "点击icon 将其发大，还可以分享到那个平台", Toast.LENGTH_SHORT).show();
+                if (url==null){
+                    return;
+                }
+                Intent intent2=new Intent(StatisticsActivity.this,StatisticsHeadPhotoActivity.class);
+                Bundle bundle2=new Bundle();
+                bundle2.putString("url",url);
+                intent2.putExtra("bundle",bundle2);
+                startActivity(intent2);
                 break;
             case R.id.activity_statistics_tv_six:
 
@@ -283,8 +292,14 @@ public class StatisticsActivity extends AppCompatActivity {
                 startActivity(intent1);
                 break;
             case R.id.activity_statistics_head_ll_comment:
-                //TODO  点击收藏
-                Toast.makeText(StatisticsActivity.this, "点击收藏", Toast.LENGTH_SHORT).show();
+                if (mComicId==null){
+                    return;
+                }
+                Intent intent3=new Intent(StatisticsActivity.this,ProgramMainActivity.class);
+                Bundle bundle3=new Bundle();
+                bundle3.putString("id",mComicId);
+                intent3.putExtra("bundle",bundle3);
+                startActivity(intent3);
                 break;
             case R.id.activity_statistics_head_ll_download:
                 //TODO  点击下载
