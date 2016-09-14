@@ -1,7 +1,10 @@
 package com.example.u17.module_login.activity;
 
 import android.content.Intent;
+import android.content.Loader;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v4.app.LoaderManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,7 +20,7 @@ import butterknife.ButterKnife;
  * @Desc:
  * @Time:2016/9/9
  */
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener, android.app.LoaderManager.LoaderCallbacks<Cursor> {
     //返回图标
     @BindView(R.id.icon_image_view_login_back)
     ImageView mLoginBack;
@@ -49,5 +52,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
 
         }
+    }
+
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+        return null;
+    }
+
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+
+    }
+
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+
     }
 }
