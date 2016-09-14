@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:padding="8dp"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_titleIconUrl_2"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:src="@drawable/u17_default_comic_cover_bg"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tv_itemTitle_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:textColor="#3f3f3f"
+        android:textSize="18dp"
+        android:text="每日限免"/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:src="@drawable/pic_today_free"/>
+</LinearLayout>

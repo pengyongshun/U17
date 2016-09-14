@@ -20,4 +20,6 @@ public class BaseUrl {
     public static final String COMMEN_URL="http://app.u17.com/v3/appV3/android/phone/comment/list?thread_id=18977829&object_id=13707&page=-1&v=3120100&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
     public static final String COMMEN_BASE_URL="http://app.u17.com/v3/appV3/android/phone/comment/list?thread_id=18977829&object_id=";
     public static final String COMMEN_BOTTOM_URL="&page=-1&v=3120100&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
+    //阅读
+    public static final String READING_URL="http://app.u17.com/v3/appV3/android/phone/comic/chapterNew?v=3120100&chapter_id=527470&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
 }

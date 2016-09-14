@@ -24,11 +24,11 @@ import butterknife.ButterKnife;
  * @Time:2016/9/9
  */
 public class SerachDetialTodayAdapter extends BaseAdapter {
-    private List<SerachDetialTodayBean.DataBean.ReturnDataBean.ComicsBean>beanList=new ArrayList<>();
+    private List<SerachDetialTodayBean>beanList=new ArrayList<>();
     private Context context;
     private LayoutInflater mLayoutInflater;
 
-    public SerachDetialTodayAdapter(Context context, List<SerachDetialTodayBean.DataBean.ReturnDataBean.ComicsBean> beanList) {
+    public SerachDetialTodayAdapter(Context context, List<SerachDetialTodayBean> beanList) {
         this.context = context;
         this.beanList = beanList;
         mLayoutInflater=LayoutInflater.from(context);
@@ -59,7 +59,7 @@ public class SerachDetialTodayAdapter extends BaseAdapter {
             hodler= (SerachDetialTodayViewHodler) convertView.getTag();
         }
         //更新UI
-        SerachDetialTodayBean.DataBean.ReturnDataBean.ComicsBean comicsBean = beanList.get(position);
+        SerachDetialTodayBean comicsBean = beanList.get(position);
         String cover = comicsBean.getCover();
         String conTag = comicsBean.getConTag();
         String description = comicsBean.getDescription();

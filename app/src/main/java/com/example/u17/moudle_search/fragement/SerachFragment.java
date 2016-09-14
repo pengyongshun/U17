@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.u17.R;
@@ -43,8 +44,6 @@ public class SerachFragment extends Fragment implements View.OnClickListener {
     public ListView mListView;
     @BindView(R.id.fragment_serach_list_btn_serach)
     public Button mBtnSerach;
-    @BindView(R.id.fragment_serach_list_tv_empty)
-    public TextView mTvEmpty;
     private List<Integer> ids=new ArrayList<>();
     private SerachListLvAdapter mSerachListLvAdapter;
     private List<SerachListBean.DataBean.ReturnDataBean.TopListBean>topBeans=new ArrayList<>();
@@ -223,10 +222,14 @@ public class SerachFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initListview() {
+        //添加空试图进度条
+        ProgressBar progressBar = new ProgressBar(context);
+        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        progressBar.setLayoutParams(params);
         ids.add(R.drawable.icon_classify_bottom_top_image);
         mSerachListLvAdapter = new SerachListLvAdapter(context,ids);
         mListView.setAdapter(mSerachListLvAdapter);
-        mListView.setEmptyView(mTvEmpty);
+        mListView.setEmptyView(progressBar);
     }
     /**
      * 点击转跳到搜索界面

@@ -24,11 +24,11 @@ import butterknife.ButterKnife;
  * @Time:2016/9/10
  */
 public class SerachDetialCategoryAdapter extends BaseAdapter{
-    private List<SerachDetialTodayBean.DataBean.ReturnDataBean.ComicsBean> beanList=new ArrayList<>();
+    private List<SerachDetialTodayBean> beanList=new ArrayList<>();
     private Context context;
     private LayoutInflater mLayoutInflater;
 
-    public SerachDetialCategoryAdapter(Context context, List<SerachDetialTodayBean.DataBean.ReturnDataBean.ComicsBean> beanList) {
+    public SerachDetialCategoryAdapter(Context context, List<SerachDetialTodayBean> beanList) {
         this.context = context;
         this.beanList = beanList;
         mLayoutInflater=LayoutInflater.from(context);
@@ -59,14 +59,14 @@ public class SerachDetialCategoryAdapter extends BaseAdapter{
             hodler= (SerachDetialTPopularityViewHodler) convertView.getTag();
         }
         //更新UI
-        SerachDetialTodayBean.DataBean.ReturnDataBean.ComicsBean comicsBean = beanList.get(position);
+        SerachDetialTodayBean comicsBean = beanList.get(position);
         String cover = comicsBean.getCover();
         String conTag = comicsBean.getConTag();
         String description = comicsBean.getDescription();
         String name = comicsBean.getName();
         List<String> tags = comicsBean.getTags();
-        hodler.ivCover.setImageResource(R.drawable.main_recycler_image_default);
         if (!cover.isEmpty()){
+            hodler.ivCover.setImageResource(R.drawable.main_recycler_image_default);
             Picasso.with(context).load(cover).into(hodler.ivCover);
         }
         hodler.tvName.setText(name);

@@ -42,7 +42,8 @@
             android:label="@string/title_activity_register" />
         <activity android:name=".moudle_search.activity.StatisticsHeadPhotoActivity" />
         <activity android:name=".moudle_search.activity.ProgramMainActivity" />
-        <activity android:name=".moudle_search.activity.PublishActivity"></activity>
+        <activity android:name=".moudle_search.activity.PublishActivity" />
+        <activity android:name=".moudle_search.activity.ReadingActivity"></activity>
     </application>
 
 </manifest>

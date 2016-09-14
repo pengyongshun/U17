@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.u17.module_home.fragment.HomeFragment">
-
     <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
-        android:id="@+id/fragment_home_elv_content"
+        android:id="@+id/boutique_refresh_expand_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:groupIndicator="@null"/>
 </FrameLayout>

@@ -6,10 +6,14 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +37,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class StatisticsActivity extends AppCompatActivity {
+public class StatisticsActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.activity_statistics_head_iv_back)
     public ImageView ivBack;
     @BindView(R.id.activity_statistics_head_iv_icon)
@@ -57,7 +61,7 @@ public class StatisticsActivity extends AppCompatActivity {
     @BindView(R.id.activity_statistics_bottom_rv_like)
     public RecyclerView mRecyclerView;
     private String cover;
-    private List<StatisticsBottomBean.DataBean.ReturnDataBean> returnDataBeens=new ArrayList<>();
+    private List<StatisticsBottomBean> returnDataBeens=new ArrayList<>();
     private StatisticsBottomAdapter mStatisticsBottomAdapter;
     private int width;
     private String commentCount;
@@ -72,10 +76,10 @@ public class StatisticsActivity extends AppCompatActivity {
     private String last_update_week;
     private String description;
     private int favorite_total;
-    private List<SerachStatisticMoreBean.DataBean.ReturnDataBean.OtherWorksBean> otherWorks;
-    private StatisticsBottomBean.DataBean.ReturnDataBean returnDataBean;
+    private List<SerachStatisticMoreBean.OtherWorksBean> otherWorks;
     private String url;
     private String mComicId;
+    private PopupWindow popupWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,9 +106,11 @@ public class StatisticsActivity extends AppCompatActivity {
     private void loadBottomData() {
         new StatisticsBottomAscytask(new StatisticsBottomAscytask.BaseSBCallBack() {
             @Override
-            public void callBack(StatisticsBottomBean statisticsBottomBean) {
-                List<StatisticsBottomBean.DataBean.ReturnDataBean> returnData = statisticsBottomBean.getData().getReturnData();
-                returnDataBeens.addAll(returnData);
+            public void callBack(List<StatisticsBottomBean> statisticsBottomBean) {
+                if (statisticsBottomBean==null){
+                    return;
+                }
+                returnDataBeens.addAll(statisticsBottomBean);
                 mStatisticsBottomAdapter = new StatisticsBottomAdapter();
                 mRecyclerView.setAdapter(mStatisticsBottomAdapter);
             }
@@ -138,7 +144,7 @@ public class StatisticsActivity extends AppCompatActivity {
         //类似于baseAdapter的getView中的更新UI
         @Override
         public void onBindViewHolder(final StatisticsViewHodler holder, int position) {
-            final StatisticsBottomBean.DataBean.ReturnDataBean returnDataBean = returnDataBeens.get(position);
+            final StatisticsBottomBean returnDataBean = returnDataBeens.get(position);
             holder.imageView.setTag(returnDataBean);
             String cover = returnDataBean.getCover();
             String name = returnDataBean.getName();
@@ -177,14 +183,11 @@ public class StatisticsActivity extends AppCompatActivity {
                 if (serachStatisticsTicketBean==null){
                     return;
                 }
-                SerachStatisticsTicketBean.DataBean.ReturnDataBean returnDataBean = serachStatisticsTicketBean.getData().getReturnData();
-                SerachStatisticsTicketBean.DataBean.ReturnDataBean.ComicBean comic = returnDataBean.getComic();
-                SerachStatisticsTicketBean.DataBean.ReturnDataBean.CommentBean comment = returnDataBean.getComment();
-                favorite_total = comic.getFavorite_total();
-                commentCount = comment.getCommentCount();
-                 month_ticket = comic.getMonth_ticket();
-                 total_click = comic.getTotal_click();
-                total_tucao = comic.getTotal_tucao();
+                favorite_total = serachStatisticsTicketBean.getFavorite_total();
+                commentCount = serachStatisticsTicketBean.getCommentCount();
+                 month_ticket = serachStatisticsTicketBean.getMonth_ticket();
+                 total_click = serachStatisticsTicketBean.getTotal_click();
+                total_tucao = serachStatisticsTicketBean.getTotal_tucao();
                 tvToalTicket.setText("点击："+(total_click/100000000)+"亿");
                 tvTicketTapy.setText("首发");
                 tvMothTicket.setText("月票"+"("+month_ticket+")");
@@ -196,11 +199,13 @@ public class StatisticsActivity extends AppCompatActivity {
 
             @Override
             public void callBack(SerachStatisticMoreBean serachStatisticMoreBean) {
-                SerachStatisticMoreBean.DataBean.ReturnDataBean returnData1 = serachStatisticMoreBean.getData().getReturnData();
-                 otherWorks = returnData1.getOtherWorks();
+                if (serachStatisticMoreBean==null){
+                    return;
+                }
+                 otherWorks = serachStatisticMoreBean.getOtherWorks();
 
-                SerachStatisticMoreBean.DataBean.ReturnDataBean.ComicBean comic = serachStatisticMoreBean.getData().getReturnData().getComic();
-                SerachStatisticMoreBean.DataBean.ReturnDataBean.ComicBean.AuthorBean author = comic.getAuthor();
+                SerachStatisticMoreBean.ComicBean comic = serachStatisticMoreBean.getComic();
+                SerachStatisticMoreBean.ComicBean.AuthorBean author = comic.getAuthor();
                  url = comic.getCover();
                 Picasso.with(StatisticsActivity.this).load(url).into(ivIcon);
                 mComicId = comic.getComic_id();
@@ -258,7 +263,7 @@ public class StatisticsActivity extends AppCompatActivity {
                 LogUtils.log(StatisticsActivity.class,otherWorks.size()+"");
                 for (int i = 0; i < size; i++) {
                     StatisticsBean.OtherWorksBean newOtherWorksBean=new StatisticsBean.OtherWorksBean();
-                    SerachStatisticMoreBean.DataBean.ReturnDataBean.OtherWorksBean otherWorksBean = otherWorks.get(i);
+                    SerachStatisticMoreBean.OtherWorksBean otherWorksBean = otherWorks.get(i);
                     String comicId = otherWorksBean.getComicId();
                     String coverUrl = otherWorksBean.getCoverUrl();
                     String name = otherWorksBean.getName();
@@ -314,13 +319,29 @@ public class StatisticsActivity extends AppCompatActivity {
                 Toast.makeText(StatisticsActivity.this, "打开所有的章节", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.activity_statistics_bottom_btn_add:
-                //TODO  添加收藏
-                Toast.makeText(StatisticsActivity.this, "添加收藏", Toast.LENGTH_SHORT).show();
+                CreatePupawindow();
                 break;
             case R.id.activity_statistics_bottom_btn_read:
-                //TODO  继续阅读
-                Toast.makeText(StatisticsActivity.this, "继续阅读", Toast.LENGTH_SHORT).show();
+                Intent intent4=new Intent(StatisticsActivity.this,ReadingActivity.class);
+                startActivity(intent4);
+                break;
+            case R.id.statisticsdetial_popuwindow_btn_chance:
+                popupWindow.dismiss();
+                break;
+            case R.id.statisticsdetial_popuwindow_btn_login:
+                popupWindow.dismiss();
+                Intent rIntent=new Intent(StatisticsActivity.this,LoginActivity.class);
+                startActivity(rIntent);
                 break;
         }
+    }
+    private void CreatePupawindow(){
+        View view= LayoutInflater.from(this).inflate(R.layout.statisticdetial_popuwindow,null);
+        Button btnNicke = (Button) view.findViewById(R.id.statisticsdetial_popuwindow_btn_chance);
+        Button btnLogin = (Button) view.findViewById(R.id.statisticsdetial_popuwindow_btn_login);
+        popupWindow=new PopupWindow(view, 3*width,400);
+        popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
+        btnLogin.setOnClickListener(this);
+        btnNicke.setOnClickListener(this);
     }
 }

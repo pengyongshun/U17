@@ -40,7 +40,7 @@ public class SerachDetialCategoryFragment extends Fragment {
     public PullToRefreshListView mListView;
     @BindView(R.id.serach_detial_category_tv_empty)
     public TextView mTvEmpty;
-    private List<SerachDetialTodayBean.DataBean.ReturnDataBean.ComicsBean> beens=new ArrayList<>();
+    private List<SerachDetialTodayBean> beens=new ArrayList<>();
     private SerachDetialCategoryAdapter mAdapter;
     private Bundle bundle;
     private int count=1;
@@ -124,7 +124,7 @@ public class SerachDetialCategoryFragment extends Fragment {
                 if (beens==null){
                     return;
                 }
-                SerachDetialTodayBean.DataBean.ReturnDataBean.ComicsBean comicsBean = beens.get(position-1);
+                SerachDetialTodayBean comicsBean = beens.get(position-1);
                 int comicId = comicsBean.getComicId();
                 String cover = comicsBean.getCover();
                 Intent intent=new Intent(context, StatisticsActivity.class);
@@ -140,12 +140,11 @@ public class SerachDetialCategoryFragment extends Fragment {
     private void LoadData(int page) {
         new SerachDetialHeadTodayAscytask(new SerachDetialHeadTodayAscytask.SDHTCallBack() {
             @Override
-            public void callBack(SerachDetialTodayBean serachDetialTodayBean) {
+            public void callBack(List<SerachDetialTodayBean> serachDetialTodayBean) {
                 if (serachDetialTodayBean==null){
                     return;
                 }
-                List<SerachDetialTodayBean.DataBean.ReturnDataBean.ComicsBean> comics = serachDetialTodayBean.getData().getReturnData().getComics();
-                beens.addAll(comics);
+                beens.addAll(serachDetialTodayBean);
                 mAdapter.notifyDataSetChanged();
             }
         }).execute(SerachUrl.SERACH_DETIAL_HEAD_URL_BASE+"?argValue="+argValue+"&argName="+argName+"&argCon="
@@ -159,15 +158,6 @@ public class SerachDetialCategoryFragment extends Fragment {
             mListView.setAdapter(mAdapter);
         }
 
-    }
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (beens!=null){
-            beens.clear();
-        }
     }
 
 

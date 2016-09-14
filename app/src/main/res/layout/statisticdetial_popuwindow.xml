@@ -20,15 +20,15 @@
         android:layout_marginTop="5dp"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/program_popuwindow_btn_nicke"
+            android:id="@+id/statisticsdetial_popuwindow_btn_chance"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:text="匿名发布"
+            android:text="取消"
             android:background="@drawable/program_popuwindow_button"
             android:textSize="16dp"
             android:gravity="center"/>
         <Button
-            android:id="@+id/program_popuwindow_btn_login"
+            android:id="@+id/statisticsdetial_popuwindow_btn_login"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:text="登录"

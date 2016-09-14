@@ -7,6 +7,6 @@ package com.example.u17.module_home.url;
  */
 public class HomeUrl {
     //首页List与ViewPager：GET请求方式
-    public static final String HOME_LIST_URL="http://app.u17.com/v3/appV3/android/phone/comic/boutiqueListNew?v=3120100&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
+    public static final String HOME_LIST_URL="http://app.u17.com/v3/appV3/android/phone/comic/boutiqueListNew?android_id=D017C20B4D4D0000&v=3120100&model=HTC+Z710t&come_from=wandoujia";
 
 }

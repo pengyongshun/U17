@@ -27,7 +27,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="完美作品"
-                android:textSize="24dp"
+                android:textSize="16dp"
                 android:gravity="center"/>
             <Spinner
                 android:id="@+id/activity_serach_detial_category_tool_sn_meun"

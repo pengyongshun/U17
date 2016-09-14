@@ -4,14 +4,17 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.u17.R;
 import com.example.u17.base_http.BaseUrl;
@@ -40,6 +43,7 @@ public class ProgramMainActivity extends AppCompatActivity implements View.OnCli
     private CommenAdapter mCommenAdapter;
     private String id;
     private PopupWindow popupWindow;
+    private int width;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,9 @@ public class ProgramMainActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_program_main);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
+        //平分屏幕
+        Display display = getWindowManager().getDefaultDisplay();
+        width = display.getWidth();
         //从上一个界面接收id
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("bundle");
@@ -107,8 +114,8 @@ public class ProgramMainActivity extends AppCompatActivity implements View.OnCli
        View view= LayoutInflater.from(this).inflate(R.layout.program_popuwindow,null);
         Button btnNicke = (Button) view.findViewById(R.id.program_popuwindow_btn_nicke);
         Button btnLogin = (Button) view.findViewById(R.id.program_popuwindow_btn_login);
-        popupWindow=new PopupWindow(view);
-        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+        popupWindow=new PopupWindow(view, width,400);
+        popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
         btnLogin.setOnClickListener(this);
         btnNicke.setOnClickListener(this);
     }
