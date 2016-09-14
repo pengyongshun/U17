@@ -1,39 +1,7 @@
 [
     {
-        "merged": "E:\\workspace\\studiowork\\Android1604\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
-        "source": "E:\\workspace\\studiowork\\Android1604\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
-        "source": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
-        "source": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
-    },
-    {
-        "merged": "E:\\workspace\\studiowork\\Android1604\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
-        "source": "E:\\workspace\\studiowork\\Android1604\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
-    },
-    {
         "merged": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
         "source": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
-    },
-    {
-        "merged": "E:\\workspace\\studiowork\\Android1604\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
-        "source": "E:\\workspace\\studiowork\\Android1604\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
-        "source": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
-    },
-    {
-        "merged": "E:\\workspace\\studiowork\\Android1604\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
-        "source": "E:\\workspace\\studiowork\\Android1604\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
-        "source": "D:\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
     },
     {
         "merged": "C:\\Users\\admin\\AndroidStudioProjects\\U17\\refreshlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",

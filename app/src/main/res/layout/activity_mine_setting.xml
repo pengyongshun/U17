@@ -205,7 +205,9 @@
             android:layout_marginLeft="20.0dp"
             android:layout_marginRight="20.0dp"
             android:layout_marginTop="-2.0dp"
-            android:background="@color/text_color_type6" />
+            android:background="@color/text_color_type6"
+            android:visibility="gone"
+            />
 
         <RelativeLayout
             android:id="@+id/setting_cache_outer"
@@ -215,7 +217,9 @@
             android:orientation="horizontal"
             android:paddingBottom="16.0dp"
             android:paddingLeft="20.0dp"
-            android:paddingRight="20.0dp">
+            android:paddingRight="20.0dp"
+            android:visibility="gone"
+            >
 
             <TextView
                 android:id="@+id/outer_title"

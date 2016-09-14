@@ -40,7 +40,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         ButterKnife.bind(this);
-        mGameBack.setOnClickListener(this);
+        //mGameBack.setOnClickListener(this);
 
         initListView();
         initHeadView();
