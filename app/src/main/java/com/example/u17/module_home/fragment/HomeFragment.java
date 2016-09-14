@@ -19,7 +19,6 @@ public class HomeFragment extends Fragment {
     @BindView(R.id.boutique_refresh_expand_listview)
     public PullToRefreshExpandableListView mExpandListView;
     private Context mContext;
-
     public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
         return fragment;

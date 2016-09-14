@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <ImageView
+            android:id="@+id/iv_item_home_child_view3_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/u17_default_comic_cover_bg"/>
+        <TextView
+            android:id="@+id/tv_item_home_child_view3_chapterNew"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="12dp"
+            android:gravity="center_vertical"
+            android:background="#88888888"
+            android:layout_alignParentBottom="true"
+            android:text="更新到119集"/>
+    </RelativeLayout>
+</LinearLayout>
