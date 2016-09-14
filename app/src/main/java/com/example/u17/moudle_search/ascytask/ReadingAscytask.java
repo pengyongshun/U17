@@ -40,7 +40,7 @@ public class ReadingAscytask extends AsyncTask<String,Void,List<String>> {
             int length = image_list.length();
             for (int i = 0; i < length; i++) {
                 JSONObject jsonObject = image_list.getJSONObject(i);
-                String img05 = jsonObject.getString("img05");
+                String img05 = jsonObject.getString("img50");
                 urlList.add(img05);
             }
             return urlList;

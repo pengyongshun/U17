@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.example.u17.R;
 import com.example.u17.base_uitls.net_uitls.ImageLoader;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -60,7 +61,9 @@ public class ReadingAdapter extends BaseAdapter {
             return null;
         }
         hodler.imageView.setImageResource(R.drawable.main_recycler_image_default);
-        ImageLoader.init(context).load(url,hodler.imageView);
+
+       // ImageLoader.init(context).load(url,hodler.imageView);
+        Picasso.with(context).load(url).into(hodler.imageView);
         return convertView;
     }
     class ReadingViewHodler{
