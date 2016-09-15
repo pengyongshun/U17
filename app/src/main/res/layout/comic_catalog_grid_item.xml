@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/tv_comic_catalog"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="1"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/shape_comic_detail_grey"
+        />
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@+id/tv_comic_catalog"
+        android:layout_alignLeft="@+id/tv_comic_catalog"
+        android:id="@+id/iv_detail_chapter_vip"
+        android:src="@drawable/detail_chapter_vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@+id/tv_comic_catalog"
+        android:layout_alignRight="@+id/tv_comic_catalog"
+        android:id="@+id/iv_comic_detail_chapter_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/comic_detail_chapter_new"/>
+
+</RelativeLayout>

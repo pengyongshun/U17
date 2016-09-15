@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_clear_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="清除历史搜索记录"
+        android:textSize="12sp"/>
+
+    <View
+        android:id="@+id/line_below"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="#666666"/>
+
+    <TextView
+        android:id="@+id/tv_hot_word_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="热门搜索"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_hot_word_search"
+        android:background="#cccccc"/>
+
+    <com.example.u17.base_cusview.MyFlowLayout
+        android:id="@+id/mfl_hot_word"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/line"
+        android:layout_margin="10dp"/>
+</LinearLayout>

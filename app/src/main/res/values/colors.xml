@@ -19,4 +19,8 @@
     <color name="text_color_type6">#ff435356</color>
     <color name="text_color_8FDF50">#8FDF50</color>
     <color name="text_color_FF000000">#FF000000</color>
+    <color name="comicGreen">#71e271</color>
+    <color name="colorGrey">#CCCCCC</color>
+    <color name="colorTextCursor">#009688</color>
+    <color name="colorTextTags">#FCB79C</color>
 </resources>

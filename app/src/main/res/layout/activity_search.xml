@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/rl_classify_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        >
+
+        <ImageView
+            android:id="@+id/iv_classify_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="16dp"
+            android:src="@drawable/toolbar_back_normal" />
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:layout_toRightOf="@id/iv_classify_back"
+            android:layout_toLeftOf="@+id/iv_classify_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/classify_search_normal"/>
+            <TextView
+                android:layout_toRightOf="@id/iv_classify_back"
+                android:layout_toLeftOf="@+id/iv_classify_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#A5B1B3"
+                android:text="漫画名|作者"
+                />
+        </LinearLayout>
+        <com.example.u17.base_cusview.MyEditText
+            android:id="@+id/et_search"
+            android:layout_toRightOf="@id/iv_classify_back"
+            android:layout_toLeftOf="@+id/iv_classify_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入搜索内容"
+            android:visibility="gone"
+            android:textSize="12sp"
+            android:textColor="#363636"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+        <ImageView
+            android:id="@+id/iv_classify_search"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:paddingRight="8dp"
+            android:src="@drawable/classify_search_normal" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/rl_classify_toolbar"
+        android:background="#c0d2c5"></View>
+    <LinearLayout
+        android:layout_below="@+id/line"
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+
+</RelativeLayout>

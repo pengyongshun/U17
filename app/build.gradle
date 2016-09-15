@@ -24,6 +24,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
     compile project(':refreshlibrary')
+    compile project(':httplibrary')
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.google.code.gson:gson:2.7'

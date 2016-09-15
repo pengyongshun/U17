@@ -20,62 +20,12 @@
             app:tabMode="scrollable"
             app:tabSelectedTextColor="#FF00FF00"
             app:tabTextColor="#878787" />
-        <!--
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_toLeftOf="@+id/iv_delete_read_history"
-                    android:orientation="horizontal">
 
-                    <RadioGroup
-                        android:id="@+id/tab_layout_bookshelf"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="3"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/bookshelf_top_rb_view_collection"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:button="@null"
-                            android:gravity="center"
-                            android:text="收藏"
-                            android:textColor="#878787"
-                            android:textSize="@dimen/common_text_15sp" />
-
-                        <RadioButton
-                            android:id="@+id/bookshelf_top_rb_view_history"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:button="@null"
-                            android:gravity="center"
-                            android:text="历史"
-                            android:textColor="#878787"
-                            android:textSize="@dimen/common_text_15sp" />
-
-                        <RadioButton
-                            android:id="@+id/bookshelf_top_rb_view_download"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:button="@null"
-                            android:gravity="center"
-                            android:text="下载"
-                            android:textColor="#878787"
-                            android:textSize="@dimen/common_text_15sp" />
-                    </RadioGroup>
-                    -->
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
-        <!--
-        </LinearLayout>
-                        -->
 
         <ImageView
             android:id="@+id/iv_delete_read_history"

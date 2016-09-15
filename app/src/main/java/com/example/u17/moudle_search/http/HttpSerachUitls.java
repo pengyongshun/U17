@@ -1,7 +1,4 @@
 package com.example.u17.moudle_search.http;
-
-import com.example.u17.module_home.http.HttpHomeListService;
-
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

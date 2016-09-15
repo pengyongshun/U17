@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:id="@+id/rl_search_result_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/iv_search_result_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="16dp"
+            android:src="@drawable/toolbar_back_normal" />
+
+        <TextView
+            android:id="@+id/tv_search_result_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="魔幻"/>
+        <Spinner
+            android:id="@+id/spinner_search_result_sort"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:dropDownWidth="wrap_content"
+            android:popupBackground="#ffffff"
+            android:background="@null"
+            android:spinnerMode="dropdown"
+            android:dropDownVerticalOffset="36dp"/>
+        android:background="@drawable/spinner_selector" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_below="@+id/rl_search_result_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#cccccc"
+        />
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/ptrf_search_result"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:scrollbars="none"/>
+</RelativeLayout>

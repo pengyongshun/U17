@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="special">
+        <item>全部专题</item>
+        <item>漫画推荐</item>
+        <item>活动有礼</item>
+        <item>次元空间</item>
+    </string-array>
+
     <string-array name="bookshelfTabs">
         <item>收藏</item>
         <item>历史</item>
         <item>下载</item>
     </string-array>
+
+    <string-array name="search_result_sort">
+        <item>点击</item>
+        <item>更新</item>
+        <item>收藏</item>
+    </string-array>
+
 </resources>

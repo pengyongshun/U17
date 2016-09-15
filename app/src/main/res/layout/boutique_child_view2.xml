@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv_boutique_cover"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/u17_default_comic_cover_bg" />
+
+    <LinearLayout
+        android:layout_toRightOf="@+id/iv_boutique_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_boutique_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:textColor="#3f3f3f"
+            android:textSize="18sp"
+            android:text="后宫日常" />
+
+        <TextView
+            android:id="@+id/tv_boutique_short_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="后宫的日常……"
+            android:lines="3"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_boutique_author_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:textColor="#3f3f3f"
+            android:text="通幽"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_boutique_start_reading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#71e271"
+        android:layout_marginLeft="16dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:text="开始阅读"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_alignBottom="@+id/iv_boutique_cover"
+        android:layout_toRightOf="@+id/iv_boutique_cover"/>
+</RelativeLayout>

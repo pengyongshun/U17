@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.example.u17.R;
 import com.example.u17.base_uitls.log_uitls.LogUtils;
+import com.example.u17.module_home.activity.SearchActivity;
 import com.example.u17.moudle_search.activity.SerachDetialActivity;
 import com.example.u17.moudle_search.activity.SerachDetialCategoryActivity;
 import com.example.u17.moudle_search.activity.SerachSerachActivity;
@@ -236,7 +237,7 @@ public class SerachFragment extends Fragment implements View.OnClickListener {
      *
      * */
     public void onClick(View view){
-        Intent intent=new Intent(context, SerachSerachActivity.class);
+        Intent intent=new Intent(context, SearchActivity.class);
         startActivity(intent);
     }
 

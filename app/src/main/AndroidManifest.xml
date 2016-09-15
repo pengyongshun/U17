@@ -43,7 +43,18 @@
         <activity android:name=".moudle_search.activity.StatisticsHeadPhotoActivity" />
         <activity android:name=".moudle_search.activity.ProgramMainActivity" />
         <activity android:name=".moudle_search.activity.PublishActivity" />
-        <activity android:name=".moudle_search.activity.ReadingActivity"></activity>
+        <activity android:name=".moudle_search.activity.ReadingActivity" />
+        <activity android:name=".module_home.activity.RankingActivity" />
+        <activity android:name=".module_home.activity.SpecialActivity" />
+        <activity android:name=".module_home.activity.SpecialDetailActivity" />
+        <activity android:name=".module_home.activity.AllCateLogActivity" />
+        <activity android:name=".module_home.activity.AnimationActivity" />
+        <activity android:name=".module_home.activity.SearchActivity" />
+        <activity android:name=".module_home.activity.SearchResultActivity" />
+        <activity android:name=".module_home.activity.ComicContentActivity"></activity>
+        <provider
+            android:name=".db.MyContentProvider"
+            android:authorities="com.example.u17.db.MyContentProvider" />
     </application>
 
 </manifest>

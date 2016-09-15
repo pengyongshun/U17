@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/iv_comic_cover"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/u17_default_comic_cover_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_comic_cover"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_comic_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tv_comic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="幻翼飞翔"
+                android:textStyle="bold"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/iv_comic_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_comic_name"
+                android:src="@drawable/icon_comic_vip"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_comic_tags_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_comic_name"
+            android:layout_marginTop="10dp"
+            android:text="少女 魔幻 动作 | 向右向左"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_comic_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_comic_tags_author"
+            android:layout_marginTop="10dp"
+            android:lines="2"
+            android:text="费雪芽在放学路上偶然遇到了一只鸡，并因为它的引导发现了受伤的神秘少女青羽。青羽赐予了力量给雪芽，雪芽在震惊中昏睡过去。醒来后以为一切都结束了。然后，她在一周后在学校顶楼的天台上为了捡拾飞走的饭盒盖子而跌倒。在滑出天台即将遭遇危险的时候，她无意中发挥出了微弱的翼族力量，悬浮在了空中。？？正当雪芽对此难以置信的时候，她居然被一个突然出现的少年绑架了！？？"
+            android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/iv_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_comic_conTag_value"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_count_down"/>
+        <TextView
+            android:id="@+id/tv_comic_conTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_clock"
+            android:layout_alignBottom="@+id/tv_comic_conTag_value"
+            android:layout_marginTop="20dp"
+            android:gravity="bottom"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_comic_conTag_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_comic_description"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/tv_comic_conTag"
+            android:gravity="bottom"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
