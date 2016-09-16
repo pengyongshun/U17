@@ -63,8 +63,6 @@ public class SerachDetialActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
         initFragment();
         initAdapter();
-
-
     }
 
     private void initAdapter() {
