@@ -49,7 +49,12 @@
         <activity android:name=".module_home.activity.AnimationActivity" />
         <activity android:name=".module_home.activity.SearchActivity" />
         <activity android:name=".module_home.activity.SearchResultActivity" />
-        <activity android:name=".module_home.activity.ComicContentActivity"></activity>
+        <activity android:name=".module_home.activity.ComicContentActivity"/>
+        <activity android:name=".module_mine.activity.AccountActivity"/>
+        <activity android:name=".module_mine.activity.RechargeActivity"/>
+        <activity android:name=".module_mine.activity.SignActivity"/>
+        <activity android:name=".module_mine.activity.SubscribeActivity"/>
+        <activity android:name=".module_mine.activity.UserInfoActivity"/>
         <provider
             android:name=".db.MyContentProvider"
             android:authorities="com.example.u17.db.MyContentProvider" />

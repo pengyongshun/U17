@@ -14,9 +14,14 @@ import android.widget.TextView;
 import com.example.u17.R;
 import com.example.u17.module_login.activity.LoginActivity;
 import com.example.u17.module_mine.activity.AboutUsActivity;
+import com.example.u17.module_mine.activity.AccountActivity;
 import com.example.u17.module_mine.activity.AuthorActivity;
 import com.example.u17.module_mine.activity.FeedbackActivity;
+import com.example.u17.module_mine.activity.RechargeActivity;
 import com.example.u17.module_mine.activity.SettingActivity;
+import com.example.u17.module_mine.activity.SignActivity;
+import com.example.u17.module_mine.activity.SubscribeActivity;
+import com.example.u17.module_mine.activity.UserInfoActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -116,12 +121,12 @@ public class LoginMineFragment extends Fragment implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.login2_circle_header_image:
-                ////////////签到/////////////////
-                Intent intent1 = new Intent(context, LoginActivity.class);
+                ////////////用户信息/////////////////
+                Intent intent1 = new Intent(context, UserInfoActivity.class);
                 startActivity(intent1);
                 break;
 //            case R.id.login2_entrance:
-//                ////////////签到/////////////////
+//                ////////////VIP/////////////////
 //                Intent intent2=new Intent(context, LoginActivity.class);
 //                startActivity(intent2);
 //                break;
@@ -130,18 +135,18 @@ public class LoginMineFragment extends Fragment implements View.OnClickListener 
                 startActivity(intent3);
                 break;
             case R.id.fragment2_mine_text_account:
-                ////////////签到/////////////////
-                Intent intent4 = new Intent(context, LoginActivity.class);
+                ////////////消费记录/////////////////
+                Intent intent4 = new Intent(context, AccountActivity.class);
                 startActivity(intent4);
                 break;
             case R.id.fragment2_mine_text_recharge:
-                ////////////签到/////////////////
-                Intent intent5 = new Intent(context, LoginActivity.class);
+                ////////////充值/////////////////
+                Intent intent5 = new Intent(context, RechargeActivity.class);
                 startActivity(intent5);
                 break;
             case R.id.fragment2_mine_text_subscribe:
-                ////////////签到/////////////////
-                Intent intent6 = new Intent(context, LoginActivity.class);
+                ////////////我的订阅/////////////////
+                Intent intent6 = new Intent(context, SubscribeActivity.class);
                 startActivity(intent6);
                 break;
             case R.id.fragment2_mine_text_feedback:
@@ -154,7 +159,7 @@ public class LoginMineFragment extends Fragment implements View.OnClickListener 
                 break;
             case R.id.fragment2_mine_text_sign:
                 ////////////签到/////////////////
-                Intent intent9 = new Intent(context, LoginActivity.class);
+                Intent intent9 = new Intent(context, SignActivity.class);
                 startActivity(intent9);
                 break;
 //            case R.id.fragment2_mine_text_games:
