@@ -9,7 +9,7 @@ public class Constant {
 
     public static final int success = 0;
 
-    public static final String NET_ERROR = "网络出错";
+    public static final String NET_ERROR = "请检查网络连接！";
 
     public static final int RECOMMENT = 0;//最新推荐
 

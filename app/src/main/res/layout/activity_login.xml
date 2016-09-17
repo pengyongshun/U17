@@ -118,7 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15.0dp"
                         android:layout_marginTop="20.0dp"
-                        android:text="邮箱快速注册"
+                        android:text="手机快速注册"
                         android:textColor="@color/color_8be057"
                         android:textSize="@dimen/common_text_13sp" />
 

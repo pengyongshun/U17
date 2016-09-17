@@ -13,7 +13,7 @@
     <string name="title_activity_register">注册</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
+    <string name="prompt_email">PhoneNumber</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">登录或注册</string>
     <string name="action_sign_in_short">注册</string>
@@ -22,4 +22,13 @@
     <string name="error_incorrect_password">输入的密码不正确！</string>
     <string name="error_field_required">这个字段是必需的</string>
     <string name="permission_rationale">"需要提供电子邮件联系人权限完成。"</string>
+
+
+    <string name="account_empty">用户名为空，请重新输入！</string>
+    <string name="pwd_empty">密码为空，请重新输入！</string>
+    <string name="register_fail">注册用户失败，请重新尝试！</string>
+    <string name="register_sucess">注册成功！</string>
+    <string name="login_sucess">登陆成功！</string>
+    <string name="login_fail">登陆失败！请输入正确的用户名与密码！</string>
+    <string name="name_already_exist_one">用户已存在，请重新注册！</string>
 </resources>

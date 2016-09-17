@@ -29,11 +29,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.example.u17.R;
+import com.example.u17.module_login.dao.UserData;
+import com.example.u17.module_login.dao.UserDataManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,6 +51,8 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
     @BindView(R.id.register_image_view_back)
     ImageView mRegisterBack;
 
+
+    private UserDataManager mUserDataManager;
     /**
      * Id to identity READ_CONTACTS permission request.
      */
@@ -79,6 +84,10 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         ButterKnife.bind(this);
         mRegisterBack.setOnClickListener(this);
 
+        if (mUserDataManager == null) {
+            mUserDataManager = new UserDataManager(this);
+            mUserDataManager.openDataBase();
+        }
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -100,7 +109,8 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+                register();
+                //attemptLogin();
             }
         });
 
@@ -360,6 +370,73 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
             mAuthTask = null;
             showProgress(false);
         }
+    }
+
+    public void register() {
+        if (isUserNameAndPwdValid()) {
+            String userName = mEmailView.getText().toString().trim();
+            String userPwd = mPasswordView.getText().toString().trim();
+            //check if user name is already exist
+            int count=mUserDataManager.findUserByName(userName);
+
+            if(count>0){
+                Toast.makeText(this,userName+getString(R.string.name_already_exist_one),Toast.LENGTH_SHORT).show();
+                mEmailView.setText("");
+                mPasswordView.setText("");
+                return ;
+            }
+
+            UserData mUser = new UserData(userName, userPwd);
+            mUserDataManager.openDataBase();
+            long flag = mUserDataManager.insertUserData(mUser);
+            if (flag == -1) {
+                Toast.makeText(this, getString(R.string.register_fail),Toast.LENGTH_SHORT).show();
+                mEmailView.setText("");
+                mPasswordView.setText("");
+            }else{
+                Toast.makeText(this, getString(R.string.register_sucess),
+                        Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
+    }
+    public boolean isUserNameAndPwdValid() {
+        if (mEmailView.getText().toString().trim().equals("")) {
+            Toast.makeText(this, getString(R.string.account_empty),
+                    Toast.LENGTH_SHORT).show();
+            mEmailView.setText("");
+            mPasswordView.setText("");
+            return false;
+        } else if (mPasswordView.getText().toString().trim().equals("")) {
+            Toast.makeText(this, getString(R.string.pwd_empty),
+                    Toast.LENGTH_SHORT).show();
+            mEmailView.setText("");
+            mPasswordView.setText("");
+            return false;
+        }
+        return true;
+    }
+    @Override
+    protected void onResume() {
+        if (mUserDataManager == null) {
+            mUserDataManager = new UserDataManager(this);
+            mUserDataManager.openDataBase();
+        }
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        if (mUserDataManager != null) {
+            mUserDataManager.closeDataBase();
+            mUserDataManager = null;
+        }
+        super.onPause();
     }
 }
 

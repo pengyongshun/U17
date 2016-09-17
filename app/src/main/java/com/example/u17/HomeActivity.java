@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.example.u17.module_bookrack.fragment.BookrackFragment;
 import com.example.u17.module_home.fragment.HomeFragment;
+import com.example.u17.module_login.activity.LoginActivity;
+import com.example.u17.module_mine.fragment.LoginMineFragment;
 import com.example.u17.module_mine.fragment.MineFragment;
 import com.example.u17.moudle_search.fragement.SerachFragment;
 
@@ -33,15 +35,19 @@ public class HomeActivity extends AppCompatActivity {
     private HomeFragment mHomeFragment;
     private SerachFragment mSerchFragment;
     private MineFragment mMineFragment;
+    private LoginMineFragment mLoginMineFragment;
+
     private BookrackFragment mBookrackFragment;
     private Fragment curFragment;
     private long exitTime = 0;
+    private boolean state;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
+        state = LoginActivity.isLogin;
         mManager = getSupportFragmentManager();
         iniFragment();
         initListener();
@@ -107,11 +113,24 @@ public class HomeActivity extends AppCompatActivity {
         mHomeFragment = new HomeFragment().newInstance();
         mSerchFragment = new SerachFragment().newInstance().newInstance();
         mMineFragment = new MineFragment().newInstance().newInstance();
+        mLoginMineFragment =new LoginMineFragment().newInstance().newInstance();
+
+
         mBookrackFragment = new BookrackFragment().newInstance().newInstance();
         fragments.add(mHomeFragment);
         fragments.add(mSerchFragment);
         fragments.add(mBookrackFragment);
-        fragments.add(mMineFragment);
+
+
+
+        if(state == false){
+            fragments.add(mMineFragment);
+        }else{
+            fragments.add(mLoginMineFragment);
+        }
+
+
+
         switchFragment(0);
         seclectStateView(0);
 

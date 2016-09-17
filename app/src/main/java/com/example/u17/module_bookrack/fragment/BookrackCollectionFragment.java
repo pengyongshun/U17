@@ -29,6 +29,8 @@ public class BookrackCollectionFragment extends Fragment implements View.OnClick
 
 
     private Context context;
+    private boolean state;
+
 
     public static BookrackCollectionFragment newInstance() {
         BookrackCollectionFragment fragment = new BookrackCollectionFragment();
@@ -38,15 +40,23 @@ public class BookrackCollectionFragment extends Fragment implements View.OnClick
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        state = LoginActivity.isLogin;
         context = getContext();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_bookrack_collection, container, false);
+
+
+       View view=inflater.inflate(R.layout.fragment_bookrack_collection, container, false);
+
         ButterKnife.bind(this,view);
         mCollectionLogin.setOnClickListener(this);
+        if (state ==true){
+            View view2=inflater.inflate(R.layout.fragment_bookrack_history, container, false);
+            return view2;
+        }
         return view;
     }
 
@@ -54,8 +64,8 @@ public class BookrackCollectionFragment extends Fragment implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.tv_please_login:
-                Intent intent = new Intent(context, LoginActivity.class);
-                startActivity(intent);
+                    Intent intent = new Intent(context, LoginActivity.class);
+                    startActivity(intent);
                 break;
             default:
                 break;
