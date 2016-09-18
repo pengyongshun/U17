@@ -1,6 +1,7 @@
 package com.example.u17.moudle_search.activity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,6 +23,7 @@ import com.example.u17.base_ascytask.StatisticsBottomAscytask;
 import com.example.u17.base_bean.StatisticsBottomBean;
 import com.example.u17.base_http.BaseUrl;
 import com.example.u17.base_uitls.log_uitls.LogUtils;
+import com.example.u17.module_home.activity.AllCateLogActivity;
 import com.example.u17.module_login.activity.LoginActivity;
 import com.example.u17.moudle_search.ascytask.SerachStatisticMoreAscytask;
 import com.example.u17.moudle_search.ascytask.SerachStatisticTicketAscytask;
@@ -80,6 +82,8 @@ public class StatisticsActivity extends AppCompatActivity implements View.OnClic
     private String url;
     private String mComicId;
     private PopupWindow popupWindow;
+    private PopupWindow sharePopupWindow;
+    private int comicId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +97,7 @@ public class StatisticsActivity extends AppCompatActivity implements View.OnClic
         //从serachFragment
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("bundle");
-        int comicId = bundle.getInt("comicId");
+         comicId = bundle.getInt("comicId");
         loadHeadData(comicId);
         initBotom();
     }
@@ -234,12 +238,10 @@ public class StatisticsActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View view){
         switch (view.getId()){
             case R.id.activity_statistics_head_iv_back:
-                //TODO  返回上一界面
                 finish();
                 break;
             case R.id.activity_statistics_head_iv_share:
-                //TODO  分享
-                Toast.makeText(StatisticsActivity.this, "分享", Toast.LENGTH_SHORT).show();
+                CreateSharePupawindow();
                 break;
             case R.id.activity_statistics_head_iv_icon:
                 if (url==null){
@@ -252,7 +254,6 @@ public class StatisticsActivity extends AppCompatActivity implements View.OnClic
                 startActivity(intent2);
                 break;
             case R.id.activity_statistics_tv_six:
-
                 if (otherWorks==null){
                     return;
                 }
@@ -315,8 +316,12 @@ public class StatisticsActivity extends AppCompatActivity implements View.OnClic
                 Toast.makeText(StatisticsActivity.this, "将所有的章节排序", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.activity_statistics_middle_tv_open:
-                //TODO  打开所有的章节
-                Toast.makeText(StatisticsActivity.this, "打开所有的章节", Toast.LENGTH_SHORT).show();
+                if (comicId==0){
+                    return;
+                }
+                Intent intent6=new Intent(StatisticsActivity.this, AllCateLogActivity.class);
+                intent6.putExtra("comicId",comicId);
+                startActivity(intent6);
                 break;
             case R.id.activity_statistics_bottom_btn_add:
                 CreatePupawindow();
@@ -333,6 +338,26 @@ public class StatisticsActivity extends AppCompatActivity implements View.OnClic
                 Intent rIntent=new Intent(StatisticsActivity.this,LoginActivity.class);
                 startActivity(rIntent);
                 break;
+            case R.id.iv_share_friends:
+                sharePopupWindow.dismiss();
+                Toast.makeText(StatisticsActivity.this, "分享到朋友圈", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.iv_share_qq:
+                sharePopupWindow.dismiss();
+                Toast.makeText(StatisticsActivity.this, "分享到qq", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.iv_share_weibo:
+                sharePopupWindow.dismiss();
+                Toast.makeText(StatisticsActivity.this, "分享到微博", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.iv_share_weixin:
+                sharePopupWindow.dismiss();
+                Toast.makeText(StatisticsActivity.this, "分享到微信", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.iv_share_qq_zone:
+                sharePopupWindow.dismiss();
+                Toast.makeText(StatisticsActivity.this, "分享到qq空间", Toast.LENGTH_SHORT).show();
+                break;
         }
     }
     private void CreatePupawindow(){
@@ -343,5 +368,20 @@ public class StatisticsActivity extends AppCompatActivity implements View.OnClic
         popupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
         btnLogin.setOnClickListener(this);
         btnNicke.setOnClickListener(this);
+    }
+    private void CreateSharePupawindow(){
+        View view=LayoutInflater.from(this).inflate(R.layout.share_popup_window_view,null);
+        ImageView imagewx = (ImageView) view.findViewById(R.id.iv_share_weixin);
+        ImageView imageqq = (ImageView) view.findViewById(R.id.iv_share_qq);
+        ImageView imagefriends = (ImageView) view.findViewById(R.id.iv_share_friends);
+        ImageView imagewb = (ImageView) view.findViewById(R.id.iv_share_weibo);
+        ImageView imageqqz = (ImageView) view.findViewById(R.id.iv_share_qq_zone);
+        sharePopupWindow=new PopupWindow(view,3*width,400);
+        sharePopupWindow.showAtLocation(view,Gravity.BOTTOM,0,0);
+        imagefriends.setOnClickListener(this);
+        imagewx.setOnClickListener(this);
+        imageqq.setOnClickListener(this);
+        imagewb.setOnClickListener(this);
+        imageqqz.setOnClickListener(this);
     }
 }

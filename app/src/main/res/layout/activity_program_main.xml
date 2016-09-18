@@ -16,6 +16,7 @@
        android:layout_height="20dp"
        android:src="@drawable/icon_back"
        android:onClick="onClick"
+       android:layout_centerVertical="true"
        android:id="@+id/activity_program_tool_back"/>
    <TextView
        android:id="@+id/activity_program_tv_show_comment"

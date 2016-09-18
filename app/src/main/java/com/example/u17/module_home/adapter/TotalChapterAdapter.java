@@ -32,8 +32,11 @@ public class TotalChapterAdapter extends AbsBaseAdapter<ComicDetail.DataBean.Ret
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        String chapterNum = String.valueOf(position + 1);
-        holder.comicCatalog.setText(chapterNum);
+        ComicDetail.DataBean.ReturnDataBean.ChapterListBean chapterListBean = data.get(position);
+        String name = chapterListBean.getName();
+        holder.comicCatalog.setText(name);
+//        String chapterNum = String.valueOf(position + 1);
+//        holder.comicCatalog.setText(chapterNum);
         int type = data.get(position).getType();
         if (type==2){
             holder.chapterIsVip.setVisibility(View.VISIBLE);

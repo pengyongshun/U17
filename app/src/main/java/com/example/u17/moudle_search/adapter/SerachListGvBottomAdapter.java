@@ -61,9 +61,10 @@ public class SerachListGvBottomAdapter extends BaseAdapter {
         SerachListBean.DataBean.ReturnDataBean.RankingListBean rankingListBean = beanList.get(position);
         String cover = rankingListBean.getCover();
         String sortName = rankingListBean.getSortName();
-        holder.ivBottom.setImageResource(R.drawable.main_recycler_image_default);
+
         if (!cover.isEmpty()){
-            Picasso.with(context).load(cover).into(holder.ivBottom);
+            Picasso.with(context).load(cover).placeholder(R.drawable.u17_default_comic_cover_bg).into(holder.ivBottom);
+
         }
          holder.tvBottom.setText(sortName);
         return convertView;

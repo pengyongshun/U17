@@ -33,6 +33,7 @@ public class PublishActivity extends AppCompatActivity {
                 String content = editText.getEditableText().toString();
                 if (content.isEmpty()){
                     Toast.makeText(PublishActivity.this, "不能为空", Toast.LENGTH_SHORT).show();
+                    return;
                 }
                 Toast.makeText(PublishActivity.this, "发布成功", Toast.LENGTH_SHORT).show();
                 break;

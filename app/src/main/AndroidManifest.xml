@@ -37,7 +37,9 @@
         <activity android:name=".module_mine.activity.GameActivity" />
         <activity android:name=".module_mine.activity.SettingActivity" />
         <activity android:name=".moudle_search.activity.SerachDetialCategoryActivity" />
-        <activity android:name=".module_login.activity.RegisterActivity" android:label="@string/title_activity_register" />
+        <activity
+            android:name=".module_login.activity.RegisterActivity"
+            android:label="@string/title_activity_register" />
         <activity android:name=".moudle_search.activity.StatisticsHeadPhotoActivity" />
         <activity android:name=".moudle_search.activity.ProgramMainActivity" />
         <activity android:name=".moudle_search.activity.PublishActivity" />
@@ -49,15 +51,18 @@
         <activity android:name=".module_home.activity.AnimationActivity" />
         <activity android:name=".module_home.activity.SearchActivity" />
         <activity android:name=".module_home.activity.SearchResultActivity" />
-        <activity android:name=".module_home.activity.ComicContentActivity"/>
-        <activity android:name=".module_mine.activity.AccountActivity"/>
-        <activity android:name=".module_mine.activity.RechargeActivity"/>
-        <activity android:name=".module_mine.activity.SignActivity"/>
-        <activity android:name=".module_mine.activity.SubscribeActivity"/>
-        <activity android:name=".module_mine.activity.UserInfoActivity"/>
+        <activity android:name=".module_home.activity.ComicContentActivity" />
+        <activity android:name=".module_mine.activity.AccountActivity" />
+        <activity android:name=".module_mine.activity.RechargeActivity" />
+        <activity android:name=".module_mine.activity.SignActivity" />
+        <activity android:name=".module_mine.activity.SubscribeActivity" />
+        <activity android:name=".module_mine.activity.UserInfoActivity" />
+
         <provider
             android:name=".db.MyContentProvider"
             android:authorities="com.example.u17.db.MyContentProvider" />
+
+        <activity android:name=".moudle_search.activity.AllCategoryItemActivity"></activity>
     </application>
 
 </manifest>

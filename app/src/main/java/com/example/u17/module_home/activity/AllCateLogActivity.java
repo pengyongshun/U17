@@ -15,6 +15,7 @@ import com.example.u17.module_home.adapter.TotalChapterAdapter;
 import com.example.u17.module_home.bean.ComicDetail;
 import com.example.u17.module_home.url.HomeUrl;
 import com.example.u17.module_login.activity.LoginActivity;
+import com.example.u17.moudle_search.activity.AllCategoryItemActivity;
 import com.example.u17.simplecache.ACache;
 import com.google.gson.Gson;
 import com.xinying.httplibrary.IOkTaskCallBack;
@@ -44,15 +45,14 @@ public class AllCateLogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_cate_log);
-        getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN,WindowManager.LayoutParams. FLAG_FULLSCREEN);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_all_cate_log);
         ButterKnife.bind(this);
         mCache = ACache.get(this);
         Intent intent = getIntent();
         comicId = intent.getIntExtra("comicId",0);
         initData();
+
     }
+
     private void initData() {
         data = new ArrayList<>();
         adapter = new TotalChapterAdapter(this,data);
@@ -99,14 +99,16 @@ public class AllCateLogActivity extends AppCompatActivity {
                     Intent intent = new Intent(AllCateLogActivity.this, LoginActivity.class);
                     startActivity(intent);
                 } else {
-                    Intent intent = new Intent(AllCateLogActivity.this, ComicContentActivity.class);
-                    String chapterTitle = chapter_list.get(position).getName();
-                    intent.putExtra("chapterTitle",chapterTitle);
-                    intent.putExtra("position", position);
-                    intent.putExtra("comicId", comicId);
+                    ComicDetail.DataBean.ReturnDataBean.ChapterListBean chapterListBean = chapter_list.get(position);
+                    String chapter_id = chapterListBean.getChapter_id();
+                    Intent intent=new Intent(AllCateLogActivity.this, AllCategoryItemActivity.class);
+                    Bundle bundle=new Bundle();
+                    bundle.putString("chapter_id",chapter_id);
+                    intent.putExtra("bundle",bundle);
                     startActivity(intent);
-                    finish();
                 }
+
+
             }
         });
     }

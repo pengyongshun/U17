@@ -18,5 +18,6 @@ public class SerachUrl {
     public static final String SERACH_DETIAL_BOTTOM_URL="http://app.u17.com/v3/appV3/android/phone/list/commonComicList?argValue=121&argName=special&argCon=1&page=1&v=3120100&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
     public static final String SERACH_DETIAL_BOTTOM_URL_BASE="http://app.u17.com/v3/appV3/android/phone/list/commonComicList";
     public static final String SERACH_DETIAL_BOTTOM_URL_BOTTOM="&v=3120100&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
-
+    //所有节目目录  根据chapter_id=527470
+    public static final String AllCATE_Item_URL="http://app.u17.com/v3/appV3/android/phone/comic/chapterNew?v=3120100&chapter_id=527470&model=KIW-TL00H&come_from=HUAWEI&android_id=d89014eb2314698b";
 }

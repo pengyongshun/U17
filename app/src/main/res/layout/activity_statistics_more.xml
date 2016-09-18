@@ -20,9 +20,10 @@
             android:orientation="horizontal">
             <ImageView
                 android:id="@+id/activity_statistics_more_iv_back"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:onClick="onClick"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/icon_back"/>
         </LinearLayout>
         <de.hdodenhof.circleimageview.CircleImageView
@@ -48,7 +49,7 @@
         android:id="@+id/activity_statistics_more_tab_title"
         android:layout_width="match_parent"
         app:tabMode="fixed"
-        app:tabIndicatorHeight="3dp"
+        app:tabIndicatorHeight="2dp"
         app:tabIndicatorColor="#00ff00"
         app:tabSelectedTextColor="#00ff00"
         android:layout_below="@id/activity_statistics_more_ll_head"
