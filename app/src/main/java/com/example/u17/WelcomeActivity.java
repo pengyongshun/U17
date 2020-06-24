@@ -24,7 +24,6 @@ public class WelcomeActivity extends AppCompatActivity {
             firstStartSp = getSharedPreferences("count", Context.MODE_PRIVATE);
             int count = firstStartSp.getInt("count", 0);
             //判断程序与第几次运行，如果是第一次运行则跳转到引导页面
-			//判断程序与第几次运行，如果是第一次运行则跳转到引导页面
             if (count==0){
                 Intent intent=new Intent();
                 intent.setClass(WelcomeActivity.this,GuideActivity.class);
