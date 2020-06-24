@@ -21,7 +21,6 @@ public class WelcomeActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             //获取SharedPreferences对象
-			//获取SharedPreferences对象
             firstStartSp = getSharedPreferences("count", Context.MODE_PRIVATE);
             int count = firstStartSp.getInt("count", 0);
             //判断程序与第几次运行，如果是第一次运行则跳转到引导页面
